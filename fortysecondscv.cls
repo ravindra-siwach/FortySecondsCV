@@ -342,6 +342,8 @@
 \newcommand*{\cvphone}[1]{\cvcustomdata{\faPhone}{\href{tel:#1}{#1}}}
 \newcommand*{\cvsite}[1]{\cvcustomdata{\faGlobe}{\href{#1}{#1}}}
 \newcommand*{\cvmail}[1]{\cvcustomdata{\faAt}{\href{mailto:#1}{#1}}}
+\newcommand*{\cvgit}[2]{\cvcustomdata{\faGithub}{\href{#1}{#2}}}
+\newcommand*{\cvlinkedin}[2]{\cvcustomdata{\faLinkedin}{\href{#1}{#2}}}
 \newcommand*{\cvkey}[2]{\cvcustomdata{\faKey}{%
 	\href{https://keyserver.ubuntu.com/pks/lookup?search=#2\&op=vindex\&fingerprint=on}{#1}%
 }}

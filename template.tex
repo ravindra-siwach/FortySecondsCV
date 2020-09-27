@@ -113,31 +113,34 @@
 %-------------------------------------------------------------------------------
 %% mandatory information
 % your name
-\cvname{Panda Bear}
+\cvname{Ravindra Siwach}
 % job title/career
-\cvjobtitle{Panda Scientist,\\[0.2em] Panda of the Year}
+\cvjobtitle{Senior Actuary,\\[0.2em] Data Scientist and\\[0.2em] Product Owner}
 
 %% optional information
 % profile picture
-\cvprofilepic{pics/profile.png}
+\cvprofilepic{pics/profile_new.jpg}
 % logo picture
-\cvlogopic{pics/logo_txt.png}
+% \cvlogopic{pics/logo_txt.png}
 
 % NOTE: ordering in sidebar will mimic the following order
 % date of birth
-\cvbirthday{\today}
+% \cvbirthday{November 10, 1985}
 % short address/location, use \newline if more than 1 line is required
-\cvaddress{Park Ave.~1, 555 555 B-Woods}
+% \cvaddress{Hohenzollernring 75, 50672 Cologne}
 % phone number
-\cvphone{+86 555 555 555}
+\cvphone{+49 173 602 4221}
 % personal website
-\cvsite{https://pandascience.net}
+% \cvsite{https://pandascience.net}
 % email address
-\cvmail{panda@bamboo.cn}
+\cvmail{ravindra.siwach@gmail.com}
+\cvgit{https://github.com/ravindra-siwach}{GitHub profile}
+\cvlinkedin{https://www.linkedin.com/in/ravindrasiwach/}{LinkedIn profile}
+% \cvkaggle{https://www.kaggle.com/rsiwach}{Kaggle profile}
 % pgp key
-\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% \cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
 % any other custom entry
-\cvcustomdata{\faFlag}{Chinese}
+% \cvcustomdata{\faFlag}{Chinese}
 
 %-------------------------------------------------------------------------------
 %                              SIDEBAR 1st PAGE
@@ -149,29 +152,46 @@
 	\graphicspath{{pics/flags/shiny/}}
 
 	% social network accounts incl. proper hyperlinks
-	\profilesection{Social Network}
-		\begin{icontable}{2.5em}{1em}
-			\social{\faLeaf}
-				{https://de.overleaf.com/latex/templates/forty-seconds-cv/pztcktmyngsk}
-				{Overleaf Template Link}
-			\social{\faGithub}
-				{https://github.com/PandaScience/FortySecondsCV}
-				{Github Project Page Link}
-		\end{icontable}
+	% \profilesection{Social Network}
+	% 	\begin{icontable}{2.5em}{1em}
+	% 		\social{\faLeaf}
+	% 			{https://de.overleaf.com/latex/templates/forty-seconds-cv/pztcktmyngsk}
+	% 			{Overleaf Template Link}
+	% 		\social{\faGithub}
+	% 			{https://github.com/PandaScience/FortySecondsCV}
+	% 			{Github Project Page Link}
+	% 	\end{icontable}
 
 	\profilesection{Languages}
-		\pointskill{\flag{CN.png}}{Chinese}{5}
+		\pointskill{\flag{IN.png}}{Haryanavi}{5}
+		\pointskill{\flag{IN.png}}{Hindi}{5}
+		\pointskill{\flag{GB.png}}{English}{5}
+		\pointskill{\flag{IT.png}}{Italian}{4}
 		\pointskill{\flag{DE.png}}{German}{3}
-	\pointskill{\flag{GB.png}}{English}{3}
-	\pointskill{\flag{FR.png}}{French}{3}
+		\pointskill{\flag{IN.png}}{Punjabi}{3}
+		\pointskill{\flag{IN.png}}{Urdu}{3}
 
-	\profilesection{Hard Skills}
-		\skill{\faBalanceScale}{Sleeping almost all day}
-		\skill{\faSitemap}{Eating a lot of bamboo sprouts}
-		\skill{\faGraduationCap}{Relaxing rest of the day}
+	% \profilesection{Hard Skills}
+	% 	\skill{\faBalanceScale}{Sleeping almost all day}
+	% 	\skill{\faSitemap}{Eating a lot of bamboo sprouts}
+	% 	\skill{\faGraduationCap}{Relaxing rest of the day}
 
-	\profilesection{Soft Skills}
-		\pointskill{\faHome}{Looking Cute}{4}[4]
+	\profilesection{Skills}
+	\cvsubsection{Programming}
+		\begin{sidebarminipage}
+			\chartlabel{Python}
+			\chartlabel{R}
+			\chartlabel{SQL}
+			\chartlabel{SAS}
+		\end{sidebarminipage}
+	\cvsubsection{Pricing tools}
+		\begin{sidebarminipage}
+			\chartlabel{Towers Watson Pricing Suite}
+			\chartlabel{Emblem}
+			\chartlabel{Classifier}
+			\chartlabel{Radar}
+		\end{sidebarminipage}
+		\pointskill{\faHome}{Looking Cute}{4}[5]
 			\skill[1.8em]{\faCompress}{No need to specify further}
 		\pointskill{\faChild}{Chillin' hard}{3}[4]
 			\skill[1.8em]{\faCompress}{On a tree}
@@ -244,14 +264,16 @@
 
 \makefrontsidebar
 
-\cvsection{Working Experience}
+\cvsection{Work Experience}
 \begin{cvtable}[3]
-	\cvitem{currently}{CEO The Panda Way}{Start Up}{Chief executive officer, Head
+	\cvitem{Oct 2018 -- Present}{Senior Actuary and Product Owner}{AXA}{Chief executive officer, Head
 		developer and yoga ambassador of 'The Panda Way' - A company from pandas
 		for pandas.}
 	\cvitem{2015 -- 2018}{Panda Scientist}{Bamboo University}{
 		Reasearching the impact of adequate bamboo nutrition compared to
 		conventional feeding methods.}
+	\cvitem{2010 -- 2015}{Bamboo Broker}{Stock Exchange}{Continuously achieving
+		better bamboo bangs for the buck.}
 	\cvitem{2010 -- 2015}{Bamboo Broker}{Stock Exchange}{Continuously achieving
 		better bamboo bangs for the buck.}
 \end{cvtable}
