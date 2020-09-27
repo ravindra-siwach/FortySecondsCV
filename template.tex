@@ -57,9 +57,10 @@
 % improve word spacing and hyphenation
 \usepackage{microtype}
 \usepackage{ragged2e}
+\usepackage{enumitem}
 
 % uncomment in case you don't want any hyphenation
-% \usepackage[none]{hyphenat}
+\usepackage[none]{hyphenat}
 
 % take care of proper font encoding
 \ifxetexorluatex
@@ -177,20 +178,35 @@
 	% 	\skill{\faGraduationCap}{Relaxing rest of the day}
 
 	\profilesection{Skills}
-	\cvsubsection{Programming}
-		% \begin{sidebarminipage}
-			\chartlabel{Python}
-			\chartlabel{R}
-			\chartlabel{SQL}
-			\chartlabel{SAS}
-		% \end{sidebarminipage}
-	\cvsubsection{Pricing tools}
-		% \begin{sidebarminipage}
-			\chartlabel{Emblem}
-			\chartlabel{Classifier}
-			\chartlabel{Radar}
-			\chartlabel{Earnix}
-		% \end{sidebarminipage}
+		\cvsubsection{P\&C Insurance and Pricing}
+			\begin{sidebarminipage}
+				\chartlabel{Technical Pricing}
+				\chartlabel{Leakage Analysis}
+				\chartlabel{Solvency II}
+				\chartlabel{IFRS 17}
+				\chartlabel{Telematics}
+			\end{sidebarminipage}
+		\cvsubsection{Pricing tools}
+			\begin{sidebarminipage}
+				\chartlabel{Emblem}
+				\chartlabel{Classifier}
+				\chartlabel{Radar}
+				% \chartlabel{Earnix}
+			\end{sidebarminipage}
+		\cvsubsection{Programming}
+			\begin{sidebarminipage}
+				\chartlabel{Python}
+				\chartlabel{R}
+				\chartlabel{SQL}
+				\chartlabel{SAS}
+				\chartlabel{git}
+			\end{sidebarminipage}
+		\cvsubsection{Project Management}
+			\begin{sidebarminipage}
+				\chartlabel{Agile}
+				\chartlabel{Scrum}
+				\chartlabel{Kanban}
+			\end{sidebarminipage}
 		% \pointskill{\faHome}{Looking Cute}{4}[5]
 		% 	\skill[1.8em]{\faCompress}{No need to specify further}
 		% \pointskill{\faChild}{Chillin' hard}{3}[4]
@@ -203,12 +219,12 @@
 %                              SIDEBAR 2nd PAGE
 %-------------------------------------------------------------------------------
 \addtobacksidebar{
-	\profilesection{About Me}
-	\aboutme{
-		The giant panda is a terrestrial animal and primarily spends its life
-		roaming and feeding in the bamboo forests of the Qinling Mountains and in
-		the hilly province of Sichuan.
-	}
+	% \profilesection{About Me}
+	% \aboutme{
+	% 	The giant panda is a terrestrial animal and primarily spends its life
+	% 	roaming and feeding in the bamboo forests of the Qinling Mountains and in
+	% 	the hilly province of Sichuan.
+	% }
 
 	\profilesection{Diagrams}
 	% \begin{sidebarminipage}
@@ -256,7 +272,6 @@
 	\end{memberships}
 }
 
-
 %-------------------------------------------------------------------------------
 %                         TABLE ENTRIES RIGHT COLUMN
 %-------------------------------------------------------------------------------
@@ -264,110 +279,119 @@
 
 \makefrontsidebar
 
-\cvsection{Work Experience}
-\begin{cvtable}[3]
-	\cvitem
-		{Oct 2018 -- Present}
-		{Senior Actuary and Product Owner}
-		{AXA (Cologne, Germany)}
-		{
-			Agile Scrum/Kanban Product Owner for Pricing Transformation, Portfolio Monitoring and Analytics projects leading a team of Actuaries and Data Scientists.
-		}
-	\cvitem
-		{Apr 2018 -- Sep 2018}
-		{Senior Consultant}
-		{Deloitte (Cologne, Germany)}
-		{
-			P\&C Pricing, Reserving, Solvency II, IFRS 17, Process Mining/Process Bionics.
-		}
-	\cvitem
-		{Apr 2016 -- Mar 2018}
-		{Senior Actuary and Data Scientist}
-		{Generali (Munich, Germany)}
-		{
-			P\&C Technical and Market Pricing, Portfolio Monitoring, Leakage and Cross-subsidy, Competitor Analysis, Churn/Retention Analysis and Product Development, Data Science and Machine Learning, Project management, Telematics and User based Insurance
-			- Development of Generali’s first Telematics motor insurance product offering in Germany.
-			- Mentoring team members for efficient modelling with Emblem, Classifier, Radar, SAS and R.
-			- Pricing and Portfolio Monitoring guidelines for Generali companies worldwide.
-		}
-	\cvitem
-		{Sep 2013 -- Apr 2016}
-		{Actuary and Country Manager, Global P\&C}
-		{Generali (Munich, Germany)}
-		{
-			P\&C Technical and Market Pricing, Portfolio Monitoring, Leakage and Cross-subsidy, Competitor Analysis, Churn/Retention Analysis and Product Development, Data Science and Machine Learning, Project management, Telematics and User based Insurance
-			- Development of Generali’s first Telematics motor insurance product offering in Germany.
-			- Mentoring team members for efficient modelling with Emblem, Classifier, Radar, SAS and R.
-			- Pricing and Portfolio Monitoring guidelines for Generali companies worldwide.
-		}
-	\cvitem
-		{Feb 2007 -- Jun 2009}
-		{Market Research Analyst}
-		{Evalueserve (Gurgaon, India)}
-		{
-			Project Management, Market research and analytics, Business Development.
-			Employee Performance Award in recognition of performance and team work by the Country Head and COO.
-		}
-	\cvitem
-		{Oct 2004 -- Feb 2007}
-		{Senior Business Associate}
-		{Vertex (Gurgaon, India)}
-		{
-			Training and mentoring new team members. 
-			Developing standard operating procedures and quality guidelines for internal processes.
-		}
-\end{cvtable}
+\cvsection{About Me}
+	\aboutme{
+		The giant panda is a terrestrial animal and primarily spends its life
+		roaming and feeding in the bamboo forests of the Qinling Mountains and in
+		the hilly province of Sichuan.
+	}
 
+\cvsection{Work Experience}
+	\begin{cvtable}[3]
+		\cvitem
+			{Oct 2018 -- Present}
+			{Senior Actuary and Product Owner}
+			{AXA (Cologne, Germany)}
+			{
+				Agile Scrum/Kanban Product Owner for Pricing Transformation, Portfolio Monitoring and Analytics projects leading a team of Actuaries and Data Scientists.
+			}
+		\cvitem
+			{Apr 2018 -- Sep 2018}
+			{Senior Consultant}
+			{Deloitte (Cologne, Germany)}
+			{
+				P\&C Pricing, Reserving, Solvency II, IFRS 17, Process Mining/Process Bionics.
+			}
+		\cvitem
+			{Apr 2016 -- Mar 2018}
+			{Senior Actuary and Data Scientist}
+			{Generali (Munich, Germany)}
+			{
+				P\&C Technical and Market Pricing, Portfolio Monitoring, Leakage and Cross-subsidy, Competitor Analysis, Churn/Retention Analysis and Product Development, Data Science and Machine Learning, Project management, Telematics and User based Insurance
+				- Development of Generali’s first Telematics motor insurance product offering in Germany.
+				- Mentoring team members for efficient modelling with Emblem, Classifier, Radar, SAS and R.
+				- Pricing and Portfolio Monitoring guidelines for Generali companies worldwide.
+			}
+		\cvitem
+			{Sep 2013 -- Apr 2016}
+			{Actuary and Country Manager, Global P\&C}
+			{Generali (Munich, Germany)}
+			{
+				P\&C Technical and Market Pricing, Portfolio Monitoring, Leakage and Cross-subsidy, Competitor Analysis, Churn/Retention Analysis and Product Development, Data Science and Machine Learning, Project management, Telematics and User based Insurance
+				- Development of Generali’s first Telematics motor insurance product offering in Germany.
+				- Mentoring team members for efficient modelling with Emblem, Classifier, Radar, SAS and R.
+				- Pricing and Portfolio Monitoring guidelines for Generali companies worldwide.
+			}
+		\cvitem
+			{Feb 2007 -- Jun 2009}
+			{Market Research Analyst}
+			{Evalueserve (Gurgaon, India)}
+			{
+				Project Management, Market research and analytics, Business Development.
+				Employee Performance Award in recognition of performance and team work by the Country Head and COO.
+			}
+		\cvitem
+			{Oct 2004 -- Feb 2007}
+			{Senior Business Associate}
+			{Vertex (Gurgaon, India)}
+			{
+				Training and mentoring new team members. 
+				Developing standard operating procedures and quality guidelines for internal processes.
+			}
+	\end{cvtable}
 
 \cvsection{Education}
-\cvsubsection{Postgraduate Training}
-\begin{cvtable}[1.5]
-	\cvitem{2009 -- 2010}{Post-Doc Panda Studies}{Panda Academy}
-		{In-depth studies on the impact of bamboo nutrition for young pandas and
-		its relation to relaxing, sleeping and snoozing parts of the day.}
-	\cvitem{2008 -- 2009}{Research Stay Europe}{European Panda Labs}
-		{Spending one year abroad teaching european panda facilities about the
-		newest findings and research in the field of asian rice hat covers and
-		applications for bamboo as a material.}
-\end{cvtable}
 
+	\cvsubsection{Professional}
+		\begin{cvtable}[1.5]
+			\cvitem
+				{2011 -- 2012}
+				{Institute and Faculty of Actuaries}
+				{UK}
+				{Exams CT1, CT2, CT3, CT7}
+				% {
+				% 	\vspace{-\topsep}
+				% 	\begin{itemize}[nosep]
+				% 		\item CT1 - Financial Mathematics
+				% 		\item CT2 - Finance and Financial Reporting
+				% 		\item CT3 - Probability and Mathematical Statistics
+				% 		\item CT7 - Business Economics
+				% 	\end{itemize}
+				% }
+			\cvitem
+				{2009}
+				{Society of Actuaries}
+				{USA}
+				{Exam P - Probability, Grade 9/10}
+		\end{cvtable}
 
-\cvsubsection{Study}
-\begin{cvtable}[1.5]
-	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
-		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
-		materials.}
-	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{Asian Rice Hat Institute}
-		{Impact of solar radiation onto rice hat cover materials with special
-		attention to water resistance.}
-	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
-		{Focus: Bamboo morphology and its usage in different craftmanships.}
-	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{Bamboo Institute}
-		{The bambo flute: An underestimated instrument in orchestras?}
-\end{cvtable}
-
-\cvsection{Publications}
-\begin{cvtable}
-	\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
-		{Panda's Culinary World}{2010}
-	\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
-\end{cvtable}
-
-
-\cvsection{Awards}
-\begin{cvtable}
-	\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
-	\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
-	\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
-\end{cvtable}
-
-
-\cvsection{Extra-Curricular Activities}
-\begin{cvtable}
-	\cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
-	\cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
-	\cvitemshort{Education}{Teaching young pandas to be more panda-like}
-\end{cvtable}
+	\cvsubsection{Formal}
+		\begin{cvtable}[1.5]
+			\cvitem
+				{2013 -- 2014}
+				{Master in Insurance \& Risk Management}
+				{MIB School of Management (Trieste, Italy)}
+				{
+					Graduated with Honours. Grade: 8.89/10.
+					Thesis: Solvency II: Non-life business under the new regulatory regime.
+				}
+			% \cvitem
+			% 	{}
+			% 	{Master Theses ($\varnothing\, 1,0$)}
+			% 	{Asian Rice Hat Institute}
+			% 	{Impact of solar radiation onto rice hat cover materials with special
+			% 	attention to water resistance.}
+			\cvitem
+				{2009 -- 2012}
+				{Bachelors in Statistics and Economics}
+				{EIILM University (Sikkim, India)}
+				{First Division}
+			% \cvitem
+			% 	{}
+			% 	{Bachelor Theses ($\varnothing\, 1,0$)}
+			% 	{Bamboo Institute}
+			% 	{The bambo flute: An underestimated instrument in orchestras?}
+		\end{cvtable}
 
 
 \newpage
@@ -379,55 +403,78 @@
 % 	left=\leftrightmargin
 % }
 
+\cvsection{Publications}
+	\begin{cvtable}
+		\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
+			{Panda's Culinary World}{2010}
+		\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
+	\end{cvtable}
+
+
+\cvsection{Awards}
+	\begin{cvtable}
+		\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
+		\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
+		\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
+	\end{cvtable}
+
+
+\cvsection{Extra-Curricular Activities}
+	\begin{cvtable}
+		\cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
+		\cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
+		\cvitemshort{Education}{Teaching young pandas to be more panda-like}
+	\end{cvtable}
+
 \cvsection{section}
-\cvsubsection{Subsection}
-\begin{cvtable}
-	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
-\end{cvtable}
+	\cvsubsection{Subsection}
+		\begin{cvtable}
+			\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+		\end{cvtable}
 
 \cvsection{cvitem}
-\cvsubsection{Multi-line with longer description}
-\begin{cvtable}
-	\cvitem{date}{Description}{location}{Some longer and more detailed
-		description, that takes two lines of space instead of only one.}
-	\cvitem{date}{Description}{location}{Some longer and more detailed
-		description, that takes two lines of space instead of only one.}
-	\cvitem{date}{Description}{location}{Some longer and more detailed
-		description, that takes two lines of space instead of only one.}
-\end{cvtable}
+	\cvsubsection{Multi-line with longer description}
+		\begin{cvtable}
+			\cvitem{date}{Description}{location}{Some longer and more detailed
+				description, that takes two lines of space instead of only one.}
+			\cvitem{date}{Description}{location}{Some longer and more detailed
+				description, that takes two lines of space instead of only one.}
+			\cvitem{date}{Description}{location}{Some longer and more detailed
+				description, that takes two lines of space instead of only one.}
+		\end{cvtable}
 
-\cvsubsection{One-line without description}
-\begin{cvtable}
-	\cvitem{Award}{One-line description}{Sponsor}{}
-	\cvitem{Award}{One-line description}{Sponsor}{}
-	\cvitem{Award}{One-line description}{Sponsor}{}
-\end{cvtable}
+	\cvsubsection{One-line without description}
+		\begin{cvtable}
+			\cvitem{Award}{One-line description}{Sponsor}{}
+			\cvitem{Award}{One-line description}{Sponsor}{}
+			\cvitem{Award}{One-line description}{Sponsor}{}
+		\end{cvtable}
 
-\cvsection{cvitemshort}
-\cvsubsection{One-line}
-\begin{cvtable}
-	\cvitemshort{Key}{Some further description}
-	\cvitemshort{Key}{Some further description}
-	\cvitemshort{Key}{Some further description}
-\end{cvtable}
+% \cvsection{cvitemshort}
+	% \cvsubsection{One-line}
+		% \begin{cvtable}
+		% 	\cvitemshort{Key}{Some further description}
+		% 	\cvitemshort{Key}{Some further description}
+		% 	\cvitemshort{Key}{Some further description}
+		% \end{cvtable}
 
-\cvsubsection{Multi-line with longer description}
-\begin{cvtable}
-	\cvitemshort{Key}{Some further description. Can fill even more than
-		only one single line while still keeping the correct indendation level.}
-	\cvitemshort{Key}{Some further description. Can fill even more than
-		only one single line while still keeping the correct indendation level.}
-	\cvitemshort{Key}{Some further description. Can fill even more than
-		only one single line while still keeping the correct indendation level.}
-\end{cvtable}
+	% \cvsubsection{Multi-line with longer description}
+		% \begin{cvtable}
+		% 	\cvitemshort{Key}{Some further description. Can fill even more than
+		% 		only one single line while still keeping the correct indendation level.}
+		% 	\cvitemshort{Key}{Some further description. Can fill even more than
+		% 		only one single line while still keeping the correct indendation level.}
+		% 	\cvitemshort{Key}{Some further description. Can fill even more than
+		% 		only one single line while still keeping the correct indendation level.}
+		% \end{cvtable}
 
 \cvsection{cvpubitem}
-\begin{cvtable}
-	\cvpubitem{Publication title}{Authors}{Journal}{Year}
-	\cvpubitem{Publication title}{Authors}{Journal}{Year}
-	\cvpubitem{Publication title that is spanning over multiple lines and still
-		does not look too bad}{Authors}{Journal}{Year}
-\end{cvtable}
+	\begin{cvtable}
+		\cvpubitem{Publication title}{Authors}{Journal}{Year}
+		\cvpubitem{Publication title}{Authors}{Journal}{Year}
+		\cvpubitem{Publication title that is spanning over multiple lines and still
+			does not look too bad}{Authors}{Journal}{Year}
+	\end{cvtable}
 
 \cvsignature
 
