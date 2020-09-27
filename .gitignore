@@ -1,6 +1,6 @@
 fonts/*
 tmp/*
-*pdf
+# *pdf
 *gz
 *aux
 *latexmk
