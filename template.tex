@@ -59,6 +59,10 @@
 \usepackage{ragged2e}
 \usepackage{enumitem}
 
+% improve title spacing
+% \usepackage{titlesec}
+% \titlespacing*{\cvsection}{0pc}{10pc}{3pc}
+
 % uncomment in case you don't want any hyphenation
 \usepackage[none]{hyphenat}
 
@@ -208,11 +212,21 @@
 				\chartlabel{Kanban}
 			\end{sidebarminipage}
 		\cvsubsection{Soft Skills}
-			\barskill{\faSkyatlas}{Focus on goals}{95}
-			\barskill{\faImage}{Attention to detail}{95}
-			\barskill{\faMusic}{Collaboration and team work}{95}
-			\barskill{\faMusic}{Creating new alternatives}{95}
-			\barskill{\faMusic}{Resilience}{95}
+			% \barskill{\faSkyatlas}{Focus on goals}{95}
+			% \barskill{\faImage}{Attention to detail}{95}
+			% \barskill{\faMusic}{Collaboration and team work}{95}
+			% \barskill{\faMusic}{Creating new alternatives}{95}
+			% \barskill{\faMusic}{Resilience}{95}
+			\begin{sidebarminipage}
+				\chartlabel{Focus on goals}
+				\chartlabel{Attention to detail}
+				\chartlabel{Collaboration and team work}
+				\chartlabel{Creating new alternatives}
+				\chartlabel{Resilience}
+			\end{sidebarminipage}
+
+		% \pointskill{}{Focus on goals}{5}
+
 
 		% \pointskill{\faHome}{Looking Cute}{4}[5]
 		% 	\skill[1.8em]{\faCompress}{No need to specify further}
@@ -243,55 +257,58 @@
 		\pointskill{\flag{IN.png}}{Punjabi}{3}
 		\pointskill{\flag{IN.png}}{Urdu}{3}
 
-	\profilesection{Diagrams}
+	\profilesection{Interests}
 
-		\begin{sidebarminipage}
-			\chartlabel{Bubble}
-			\chartlabel{Diagrams}
-			\chartlabel{with}
-			\chartlabel{proper}
-			\chartlabel{overflow}
-			\chartlabel{protection}
-			\chartlabel{for}
-			\chartlabel{labels}
-		\end{sidebarminipage}
+		% \begin{sidebarminipage}
+		% 	\chartlabel{Bubble}
+		% 	\chartlabel{Diagrams}
+		% 	\chartlabel{with}
+		% 	\chartlabel{proper}
+		% 	\chartlabel{overflow}
+		% 	\chartlabel{protection}
+		% 	\chartlabel{for}
+		% 	\chartlabel{labels}
+		% \end{sidebarminipage}
 
 		\begin{figure}\centering
 			\smartdiagram[bubble diagram]{
-				\textcolor{white}{\textbf{Being a}} \\
-				\textcolor{white}{\textbf{Panda}}, % center bubble
-				\textcolor{black!90}{Eating},
-				\textcolor{black!90}{Sleeping},
-				\textcolor{black!90}{Rolling},
-				\textcolor{black!90}{Playing},
-				\textcolor{black!90}{Chilling}
+				% \textcolor{white}{\textbf{Hobbies}} \\
+				\textcolor{white}{\textbf{Travelling}}, % center bubble
+				\textcolor{black!90}{Cooking},
+				\textcolor{black!90}{Languages} \\
+				\textcolor{black!90}{Dialects} \\ 
+				\textcolor{black!90}{Accents},
+				\textcolor{black!90}{Basketball},
+				\textcolor{black!90}{Programming},
+				\textcolor{black!90}{New} \\
+				\textcolor{black!90}{technology} 
 			}
 		\end{figure}
 
-		\chartlabel{Wheel Chart}
+		% \chartlabel{Wheel Chart}
 
-			\wheelchart{3.7em}{2em}{%
-			20/3em/maincolor!50/Chill,
-			15/3em/maincolor!15/Play,
-			30/4em/maincolor!40/Sleep,
-			20/3em/maincolor!20/Eat
-			}
+			% \wheelchart{3.7em}{2em}{%
+			% 20/3em/maincolor!50/Chill,
+			% 15/3em/maincolor!15/Play,
+			% 30/4em/maincolor!40/Sleep,
+			% 20/3em/maincolor!20/Eat
+			% }
 
 	% \profilesection{Barskills}
 	% 	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
 	% 	\barskill{\faImage}{Playing Chess}{30}
 	% 	\barskill{\faMusic}{Playing the bamboo flute}{50}
 
-	\profilesection{Memberships}
-		\begin{memberships}
-			\membership[4em]{pics/logo.png}{PandaScience.net}
-			% \membership[4em]{pics/logo.png}{Some longer text spanning over more than
-			% 	only one line}
-		\end{memberships}
+	% \profilesection{Memberships}
+	% 	\begin{memberships}
+	% 		\membership[4em]{pics/logo.png}{PandaScience.net}
+	% 		% \membership[4em]{pics/logo.png}{Some longer text spanning over more than
+	% 		% 	only one line}
+	% 	\end{memberships}
 }
 
 %-------------------------------------------------------------------------------
-%                         TABLE ENTRIES RIGHT COLUMN
+%                         TABLE ENTRIES RIGHT COLUMN - PAGE 1
 %-------------------------------------------------------------------------------
 \begin{document}
 
@@ -306,14 +323,13 @@
 		\cvitem
 			{Oct 2018 -- Present}
 			{Senior Actuary and Product Owner}
-			{AXA (Cologne, Germany)}
+			{Axa (Cologne, Germany)}
 			{				
 				\vspace{-\topsep}
 				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-  					\item Reduced data preparation time from 4-6 weeks to under 2 hours by building an automated ETL pipeline with automated testing.
-  					\item Training actuarial teams on git and Python.
-  					\item Developing best practices for working with Python and git workflow.
-  					\item Leading mixed team of actuaries and data scientists for pricing and analytics projects leading a team of .
+  					\item Built automated ETL and modelling pipelines to reduce the time for a typical pricing project from 2-3 months to a few days.
+  					\item Developing best practices and training actuarial teams for working with Python and git.
+  					\item Leading mixed team of actuaries and data scientists for transformation projects in P\&C pricing and analytics to replace traditionally used tools such as SAS and Emblem by Python, R etc.
 				\end{itemize}
 			}
 		\cvitem
@@ -323,7 +339,8 @@
 			{				
 				\vspace{-\topsep}
 				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-  					\item Develop P\&C pricing offering for Deloitte actuarial practice in Germany.
+  					\item Developing P\&C pricing offering for Deloitte in Germany.
+  					\item Developing tools in R for SolvencyII and IFRS17 projects.
 				\end{itemize}
 			}
 		\cvitem
@@ -333,34 +350,43 @@
 			{				
 				\vspace{-\topsep}
 				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-					  \item Development of Generali’s first Telematics motor insurance product offering in Germany.
-					  \item Mentoring team members for efficient modelling with Emblem, Classifier, Radar, SAS and R.
-					  \item Pricing and Portfolio Monitoring guidelines for Generali companies worldwide.P\&C Pricing, Reserving, Solvency II, IFRS 17, Process Mining/Process Bionics.
+					\item Suported development of Generali’s first telematics motor insurance product in Germany.
+					\item Developed peril based technical pricing models for motor and household business.
+					\item Developed an automoated framework to generate monthly reports for the management focused on price and discount leakage monitoring.
+					\item Training team members on efficient modelling with Emblem, Classifier, Radar, SAS and R.
 				\end{itemize}
 			}
 		\cvitem
 			{Sep 2013 -- Apr 2016}
 			{Actuary and Country Manager, Global P\&C}
 			{Generali (Trieste, Italy)}
-			{P\&C Technical and Market Pricing, Portfolio Monitoring, Leakage and Cross-subsidy, Competitor Analysis, Churn/Retention Analysis and Product Development, Data Science and Machine Learning, Project management, Telematics and User based Insurance
-				- Development of Generali’s first Telematics motor insurance product offering in Germany.
-				- Mentoring team members for efficient modelling with Emblem, Classifier, Radar, SAS and R.
-				- Pricing and Portfolio Monitoring guidelines for Generali companies worldwide.}
+			{
+				\vspace{-\topsep}
+				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
+					\item Defining P\&C business pricing and monitoring best practices and guidelines.
+					\item Leading projects and conducting trainings local actuaries on these topics in various European companies of Generali group.
+				\end{itemize}
+			}
 		\cvitem
 			{Feb 2007 -- Jun 2009}
 			{Market Research Analyst}
 			{Evalueserve (Gurgaon, India)}
 			{
-				Project Management, Market research and analytics, Business Development.
-				Employee Performance Award in recognition of performance and team work by the Country Head and COO.
+				\vspace{-\topsep}
+				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
+					\item Market research and business development.
+					% \item Business development: contacting prospective clients to bring in new market research projects for the company.
+				\end{itemize}
 			}
 		\cvitem
 			{Oct 2004 -- Feb 2007}
 			{Senior Business Associate}
 			{Vertex (Gurgaon, India)}
-			{
-				Training and mentoring new team members. 
-				Developing standard operating procedures and quality guidelines for internal processes.
+			{ 
+				% \vspace{-\topsep}
+				% \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
+				% 	\item Defining standard operating procedure for internal processes and mentoring new team members.
+				% \end{itemize}
 			}
 	\end{cvtable}
 
@@ -372,32 +398,53 @@
 				{2011 -- 2012}
 				{Institute and Faculty of Actuaries}
 				{UK}
-				{Exams CT1, CT2, CT3, CT7}
-				% {
-				% 	\vspace{-\topsep}
-				% 	\begin{itemize}[nosep]
-				% 		\item CT1 - Financial Mathematics
-				% 		\item CT2 - Finance and Financial Reporting
-				% 		\item CT3 - Probability and Mathematical Statistics
-				% 		\item CT7 - Business Economics
-				% 	\end{itemize}
-				% }
+				% {Exams CT1, CT2, CT3, CT7}
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item CT1 - Financial Mathematics
+						\item CT2 - Finance and Financial Reporting
+						\item CT3 - Probability and Mathematical Statistics
+						\item CT7 - Business Economics
+					\end{itemize}
+				}
 			\cvitem
 				{2009}
 				{Society of Actuaries}
 				{USA}
-				{Exam P - Probability, Grade 9/10}
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item Exam P - Probability, Grade 9/10
+					\end{itemize}
+				}
 		\end{cvtable}
 
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN - PAGE 2
+%-------------------------------------------------------------------------------
+
+\newpage
+\makebacksidebar
+% \newgeometry{
+% 	top=\topbottommargin,
+% 	bottom=\topbottommargin,
+% 	right=\leftrightmargin,
+% 	left=\leftrightmargin
+% }
+\cvsection{Education}
 	\cvsubsection{Formal}
 		\begin{cvtable}[1.5]
 			\cvitem
 				{2013 -- 2014}
 				{Master in Insurance \& Risk Management}
 				{MIB School of Management (Trieste, Italy)}
-				{
-					Graduated with Honours. Grade: 8.89/10.
-					Thesis: Solvency II: Non-life business under the new regulatory regime.
+				{	
+					% \vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}] % 
+						\item Graduated with Honours. Grade: 8.89/10.
+						\item Thesis: Risk coherent KPIs for P\&C business under SolvencyII.
+					\end{itemize}
 				}
 			% \cvitem
 			% 	{}
@@ -417,88 +464,125 @@
 			% 	{The bambo flute: An underestimated instrument in orchestras?}
 		\end{cvtable}
 
-
-\newpage
-\makebacksidebar
-% \newgeometry{
-% 	top=\topbottommargin,
-% 	bottom=\topbottommargin,
-% 	right=\leftrightmargin,
-% 	left=\leftrightmargin
-% }
-
-\cvsection{Publications}
-	\begin{cvtable}
-		\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
-			{Panda's Culinary World}{2010}
-		\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
-	\end{cvtable}
-
-
-\cvsection{Awards}
-	\begin{cvtable}
-		\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
-		\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
-		\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
-	\end{cvtable}
-
-
-\cvsection{Extra-Curricular Activities}
-	\begin{cvtable}
-		\cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
-		\cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
-		\cvitemshort{Education}{Teaching young pandas to be more panda-like}
-	\end{cvtable}
-
-\cvsection{section}
-	\cvsubsection{Subsection}
-		\begin{cvtable}
-			\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+	\cvsubsection{Other courses and certifications}
+		\begin{cvtable}[1.5]
+			\cvitem
+				{2019}
+				{Axa}
+				{Cologne, Germany}
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item Agile Scrum and Kanban.
+					\end{itemize}
+				}
+			\cvitem
+				{2018}
+				{Deloitte}
+				{France and Germany}
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item IFRS17 bootcamp.
+						\item SAS institute training for IFRS17 software.
+						\item Process mining with Celonis. (Training and Hackathon)
+					\end{itemize}
+				}
+			\cvitem
+				{2013 -- 2016}
+				{Generali Academy}
+				{Trieste, Italy}
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item Towers Watson pricing software training
+						\item Statistical modelling in R
+						\item Health Insurance - Product, Pricing and Reserving
+					\end{itemize}
+				}
+			\cvitem
+				{Ongoing}
+				{Other courses}
+				{Online}
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item Various other courses on platforms such as Coursera, Edx, Youtube etc. on Programming, R, Python, Julia, Machine Learning and Data Science etc.
+					\end{itemize}
+				}
 		\end{cvtable}
 
-\cvsection{cvitem}
-	\cvsubsection{Multi-line with longer description}
-		\begin{cvtable}
-			\cvitem{date}{Description}{location}{Some longer and more detailed
-				description, that takes two lines of space instead of only one.}
-			\cvitem{date}{Description}{location}{Some longer and more detailed
-				description, that takes two lines of space instead of only one.}
-			\cvitem{date}{Description}{location}{Some longer and more detailed
-				description, that takes two lines of space instead of only one.}
-		\end{cvtable}
+\cvsection{Awards \& Achievements}
+	\begin{cvtable}
+		\cvitemshort{2008}{Employee Performance Award at Evalueserve.}
+		\cvitemshort{2002}{Top 0.1\% scorer in 2 subjects at all-India CBSE X board exams.}
+		\cvitemshort{2001}{School top scorer at National Mathematics Talent Competitions.}
+		\cvitemshort{2001}{Member of school and state Basketball teams.}
+	\end{cvtable}
 
-	\cvsubsection{One-line without description}
-		\begin{cvtable}
-			\cvitem{Award}{One-line description}{Sponsor}{}
-			\cvitem{Award}{One-line description}{Sponsor}{}
-			\cvitem{Award}{One-line description}{Sponsor}{}
-		\end{cvtable}
+% \cvsection{Publications}
+% 	\begin{cvtable}
+% 		\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
+% 			{Panda's Culinary World}{2010}
+% 		\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}	
+% 	\end{cvtable}	
+
+% \cvsection{Extra-Curricular Activities}
+% 	\begin{cvtable}
+% 		\cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
+% 		\cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
+% 		\cvitemshort{Education}{Teaching young pandas to be more panda-like}
+% 	\end{cvtable}
+
+% \cvsection{section}
+% 	\cvsubsection{Subsection}
+% 		\begin{cvtable}
+% 			\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+% 		\end{cvtable}
+
+% \cvsection{cvitem}
+% 	\cvsubsection{Multi-line with longer description}
+% 		\begin{cvtable}
+% 			\cvitem{date}{Description}{location}{Some longer and more detailed
+% 				description, that takes two lines of space instead of only one.}
+% 			\cvitem{date}{Description}{location}{Some longer and more detailed
+% 				description, that takes two lines of space instead of only one.}
+% 			\cvitem{date}{Description}{location}{Some longer and more detailed
+% 				description, that takes two lines of space instead of only one.}
+% 		\end{cvtable}
+
+% 	\cvsubsection{One-line without description}
+% 		\begin{cvtable}
+% 			\cvitem{Award}{One-line description}{Sponsor}{}
+% 			\cvitem{Award}{One-line description}{Sponsor}{}
+% 			\cvitem{Award}{One-line description}{Sponsor}{}
+% 		\end{cvtable}
 
 % \cvsection{cvitemshort}
-	% \cvsubsection{One-line}
-		% \begin{cvtable}
-		% 	\cvitemshort{Key}{Some further description}
-		% 	\cvitemshort{Key}{Some further description}
-		% 	\cvitemshort{Key}{Some further description}
-		% \end{cvtable}
+% 	\cvsubsection{One-line}
+% 		\begin{cvtable}
+% 			\cvitemshort{Key}{Some further description}
+% 			\cvitemshort{Key}{Some further description}
+% 			\cvitemshort{Key}{Some further description}
+% 		\end{cvtable}
 
-	% \cvsubsection{Multi-line with longer description}
-		% \begin{cvtable}
-		% 	\cvitemshort{Key}{Some further description. Can fill even more than
-		% 		only one single line while still keeping the correct indendation level.}
-		% 	\cvitemshort{Key}{Some further description. Can fill even more than
-		% 		only one single line while still keeping the correct indendation level.}
-		% 	\cvitemshort{Key}{Some further description. Can fill even more than
-		% 		only one single line while still keeping the correct indendation level.}
-		% \end{cvtable}
+% 	\cvsubsection{Multi-line with longer description}
+% 		\begin{cvtable}
+% 			\cvitemshort{Key}{Some further description. Can fill even more than
+% 				only one single line while still keeping the correct indendation level.}
+% 			\cvitemshort{Key}{Some further description. Can fill even more than
+% 				only one single line while still keeping the correct indendation level.}
+% 			\cvitemshort{Key}{Some further description. Can fill even more than
+% 				only one single line while still keeping the correct indendation level.}
+% 		\end{cvtable}
 
-\cvsection{cvpubitem}
-	\begin{cvtable}
-		\cvpubitem{Publication title}{Authors}{Journal}{Year}
-		\cvpubitem{Publication title}{Authors}{Journal}{Year}
-		\cvpubitem{Publication title that is spanning over multiple lines and still
-			does not look too bad}{Authors}{Journal}{Year}
-	\end{cvtable}
+% \cvsection{cvpubitem}
+% 	\begin{cvtable}
+% 		\cvpubitem{Publication title}{Authors}{Journal}{Year}
+% 		\cvpubitem{Publication title}{Authors}{Journal}{Year}
+% 		\cvpubitem{Publication title that is spanning over multiple lines and still
+% 			does not look too bad}{Authors}{Journal}{Year}
+% 	\end{cvtable}
 
 \cvsignature
 

@@ -82,7 +82,7 @@
 \newlength\sidebartextwidth
 % default values
 \setlength{\sidebarwidth}{0.34\paperwidth}
-\setlength{\topbottommargin}{0.02\paperheight}
+\setlength{\topbottommargin}{0.05\paperheight}
 \setlength{\leftrightmargin}{0.02\paperwidth}
 % user overwrites
 \DeclareOptionX{sidebarwidth}{\setlength{\sidebarwidth}{#1}}
@@ -256,7 +256,7 @@
 \newcommand*{\cvsection}[1]{\section*{#1}}
 \titleformat{\section}%
 	{\color{sectioncolor}\normalfont\bfseries\LARGE}{}{0pt}{}
-\titlespacing*{\section}{0pt}{1.5ex}{1ex}
+\titlespacing*{\section}{0pt}{4ex}{2ex}
 
 % grey subsection style for right column
 \newcommand*{\cvsubsection}[1]{\subsection*{#1}}
