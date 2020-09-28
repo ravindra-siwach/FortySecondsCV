@@ -150,7 +150,6 @@
 \addtofrontsidebar{
 	% include gosquare national flags from https://github.com/gosquared/flags;
 	% naming according to ISO 3166-1 alpha-2 country codes
-	\graphicspath{{pics/flags/shiny/}}
 
 	% social network accounts incl. proper hyperlinks
 	% \profilesection{Social Network}
@@ -163,14 +162,6 @@
 	% 			{Github Project Page Link}
 	% 	\end{icontable}
 
-	\profilesection{Languages}
-		\pointskill{\flag{IN.png}}{Haryanavi}{5}
-		\pointskill{\flag{IN.png}}{Hindi}{5}
-		\pointskill{\flag{GB.png}}{English}{5}
-		\pointskill{\flag{IT.png}}{Italian}{4}
-		\pointskill{\flag{DE.png}}{German}{3}
-		\pointskill{\flag{IN.png}}{Punjabi}{3}
-		\pointskill{\flag{IN.png}}{Urdu}{3}
 
 	% \profilesection{Hard Skills}
 	% 	\skill{\faBalanceScale}{Sleeping almost all day}
@@ -182,9 +173,14 @@
 			\begin{sidebarminipage}
 				\chartlabel{Technical Pricing}
 				\chartlabel{Leakage Analysis}
+				\chartlabel{Competitive Benchmarking}
+				\chartlabel{Telematics}
+				\chartlabel{Churn}
+				\chartlabel{Lapse/Retention}
+				\chartlabel{Renewal Pricing}
+				\chartlabel{Optimization}
 				\chartlabel{Solvency II}
 				\chartlabel{IFRS 17}
-				\chartlabel{Telematics}
 			\end{sidebarminipage}
 		\cvsubsection{Pricing tools}
 			\begin{sidebarminipage}
@@ -200,6 +196,8 @@
 				\chartlabel{SQL}
 				\chartlabel{SAS}
 				\chartlabel{git}
+				\chartlabel{Docker}
+				\chartlabel{CI - Jenkins}
 			\end{sidebarminipage}
 		\cvsubsection{Project Management}
 			\begin{sidebarminipage}
@@ -207,6 +205,13 @@
 				\chartlabel{Scrum}
 				\chartlabel{Kanban}
 			\end{sidebarminipage}
+		\cvsubsection{Soft Skills}
+			\barskill{\faSkyatlas}{Focus on goals}{95}
+			\barskill{\faImage}{Attention to detail}{95}
+			\barskill{\faMusic}{Collaboration and team work}{95}
+			\barskill{\faMusic}{Creating new alternatives}{95}
+			\barskill{\faMusic}{Resilience}{95}
+
 		% \pointskill{\faHome}{Looking Cute}{4}[5]
 		% 	\skill[1.8em]{\faCompress}{No need to specify further}
 		% \pointskill{\faChild}{Chillin' hard}{3}[4]
@@ -225,51 +230,62 @@
 	% 	roaming and feeding in the bamboo forests of the Qinling Mountains and in
 	% 	the hilly province of Sichuan.
 	% }
+	\graphicspath{{pics/flags/shiny/}}
+
+	\profilesection{Languages}
+		\pointskill{\flag{IN.png}}{Haryanavi}{5}
+		\pointskill{\flag{IN.png}}{Hindi}{5}
+		\pointskill{\flag{GB.png}}{English}{5}
+		\pointskill{\flag{IT.png}}{Italian}{4}
+		\pointskill{\flag{DE.png}}{German}{3}
+		\pointskill{\flag{IN.png}}{Punjabi}{3}
+		\pointskill{\flag{IN.png}}{Urdu}{3}
 
 	\profilesection{Diagrams}
-	% \begin{sidebarminipage}
-		\chartlabel{Bubble}
-		\chartlabel{Diagrams}
-		\chartlabel{with}
-		\chartlabel{proper}
-		\chartlabel{overflow}
-		\chartlabel{protection}
-		\chartlabel{for}
-		\chartlabel{labels}
-	% \end{sidebarminipage}
 
-	\begin{figure}\centering
-		\smartdiagram[bubble diagram]{
-			\textcolor{white}{\textbf{Being a}} \\
-			\textcolor{white}{\textbf{Panda}}, % center bubble
-			\textcolor{black!90}{Eating},
-			\textcolor{black!90}{Sleeping},
-			\textcolor{black!90}{Rolling},
-			\textcolor{black!90}{Playing},
-			\textcolor{black!90}{Chilling}
-		}
-	\end{figure}
+		\begin{sidebarminipage}
+			\chartlabel{Bubble}
+			\chartlabel{Diagrams}
+			\chartlabel{with}
+			\chartlabel{proper}
+			\chartlabel{overflow}
+			\chartlabel{protection}
+			\chartlabel{for}
+			\chartlabel{labels}
+		\end{sidebarminipage}
 
-	\chartlabel{Wheel Chart}
+		\begin{figure}\centering
+			\smartdiagram[bubble diagram]{
+				\textcolor{white}{\textbf{Being a}} \\
+				\textcolor{white}{\textbf{Panda}}, % center bubble
+				\textcolor{black!90}{Eating},
+				\textcolor{black!90}{Sleeping},
+				\textcolor{black!90}{Rolling},
+				\textcolor{black!90}{Playing},
+				\textcolor{black!90}{Chilling}
+			}
+		\end{figure}
 
-	\wheelchart{3.7em}{2em}{%
-	20/3em/maincolor!50/Chill,
-	15/3em/maincolor!15/Play,
-	30/4em/maincolor!40/Sleep,
-	20/3em/maincolor!20/Eat
-	}
+		\chartlabel{Wheel Chart}
 
-	\profilesection{Barskills}
-	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-	\barskill{\faImage}{Playing Chess}{30}
-	\barskill{\faMusic}{Playing the bamboo flute}{50}
+			\wheelchart{3.7em}{2em}{%
+			20/3em/maincolor!50/Chill,
+			15/3em/maincolor!15/Play,
+			30/4em/maincolor!40/Sleep,
+			20/3em/maincolor!20/Eat
+			}
+
+	% \profilesection{Barskills}
+	% 	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+	% 	\barskill{\faImage}{Playing Chess}{30}
+	% 	\barskill{\faMusic}{Playing the bamboo flute}{50}
 
 	\profilesection{Memberships}
-	\begin{memberships}
-		\membership[4em]{pics/logo.png}{PandaScience.net}
-		\membership[4em]{pics/logo.png}{Some longer text spanning over more than
-			only one line}
-	\end{memberships}
+		\begin{memberships}
+			\membership[4em]{pics/logo.png}{PandaScience.net}
+			% \membership[4em]{pics/logo.png}{Some longer text spanning over more than
+			% 	only one line}
+		\end{memberships}
 }
 
 %-------------------------------------------------------------------------------
@@ -315,7 +331,7 @@
 		\cvitem
 			{Sep 2013 -- Apr 2016}
 			{Actuary and Country Manager, Global P\&C}
-			{Generali (Munich, Germany)}
+			{Generali (Trieste, Italy)}
 			{
 				P\&C Technical and Market Pricing, Portfolio Monitoring, Leakage and Cross-subsidy, Competitor Analysis, Churn/Retention Analysis and Product Development, Data Science and Machine Learning, Project management, Telematics and User based Insurance
 				- Development of Generali’s first Telematics motor insurance product offering in Germany.
