@@ -82,7 +82,7 @@
 \newlength\sidebartextwidth
 % default values
 \setlength{\sidebarwidth}{0.34\paperwidth}
-\setlength{\topbottommargin}{0.05\paperheight}
+\setlength{\topbottommargin}{0.04\paperheight}
 \setlength{\leftrightmargin}{0.02\paperwidth}
 % user overwrites
 \DeclareOptionX{sidebarwidth}{\setlength{\sidebarwidth}{#1}}
