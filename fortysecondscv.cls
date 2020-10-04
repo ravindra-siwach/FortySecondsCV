@@ -256,7 +256,7 @@
 \newcommand*{\cvsection}[1]{\section*{#1}}
 \titleformat{\section}%
 	{\color{sectioncolor}\normalfont\bfseries\LARGE}{}{0pt}{}
-\titlespacing*{\section}{0pt}{4ex}{2ex}
+\titlespacing*{\section}{0pt}{4ex}{1ex}
 
 % grey subsection style for right column
 \newcommand*{\cvsubsection}[1]{\subsection*{#1}}
@@ -711,8 +711,8 @@
 % | <keyword>      <one-line description>            |
 % use parbox if text needs to use multiple lines
 \newcommand{\cvitemshort}[2]{%
-	\parbox[t]{0.17\textwidth}{\raggedright #1}
-	& \parbox[t]{0.81\textwidth}{#2} \\}
+	\parbox[t]{0.17\textwidth}{\raggedright\strut #1\strut}
+	& \parbox[t]{0.81\textwidth}{\strut #2\strut} \\}
 
 % | <date>         <bold-title>  \hfill  <location>  |
 % |                <longer description>              |
