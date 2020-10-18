@@ -105,7 +105,7 @@
 				\chartlabel{PowerBI}
 				\chartlabel{Docker}
 				% \chartlabel{CI/CD}
-				\chartlabel{Jenkins}
+				% \chartlabel{Jenkins}
 			\end{sidebarminipage}
 
 		\cvsubsection{Project Management}
@@ -115,21 +115,21 @@
 				\chartlabel{Kanban}
 			\end{sidebarminipage}
 
-		\cvsubsection{Soft Skills}
-			% ---------------STYLE: BAR-------------------
-			% \barskill{\faSkyatlas}{Focus on goals}{95}
-			% \barskill{\faImage}{Attention to detail}{95}
-			% \barskill{\faMusic}{Collaboration and team work}{95}
-			% \barskill{\faMusic}{Creating new alternatives}{95}
-			% \barskill{\faMusic}{Resilience}{95}
-			% ---------------STYLE: BUBBLE----------------
-			\begin{sidebarminipage}\raggedright
-				\chartlabel{Focus on goals}
-				\chartlabel{Attention to detail}
-				\chartlabel{Collaboration and team work}
-				\chartlabel{Creating new alternatives}
-				\chartlabel{Resilience}
-			\end{sidebarminipage}
+		% \cvsubsection{Soft Skills}
+		% 	% ---------------STYLE: BAR-------------------
+		% 	% \barskill{\faSkyatlas}{Focus on goals}{95}
+		% 	% \barskill{\faImage}{Attention to detail}{95}
+		% 	% \barskill{\faMusic}{Collaboration and team work}{95}
+		% 	% \barskill{\faMusic}{Creating new alternatives}{95}
+		% 	% \barskill{\faMusic}{Resilience}{95}
+		% 	% ---------------STYLE: BUBBLE----------------
+		% 	\begin{sidebarminipage}\raggedright
+		% 		\chartlabel{Focus on goals}
+		% 		\chartlabel{Attention to detail}
+		% 		\chartlabel{Collaboration and team work}
+		% 		\chartlabel{Creating new alternatives}
+		% 		\chartlabel{Resilience}
+		% 	\end{sidebarminipage}
 			% ---------------STYLE: POINTS----------------
 			% \pointskill{}{Focus on goals}{5}
 }
@@ -140,7 +140,16 @@
 
 \addtobacksidebar{
 
-	\graphicspath{{pics/flags/shiny/}}
+    \graphicspath{{pics/flags/shiny/}}
+
+    \profilesection{Soft Skills}
+		% \cvsubsection{Soft Skills}
+			% ---------------STYLE: BAR-------------------
+			\barskill{\faSkyatlas}{Focus on goals}{95}
+			\barskill{\faImage}{Attention to detail}{95}
+			\barskill{\faMusic}{Collaboration and team work}{95}
+			\barskill{\faMusic}{Creating new alternatives}{95}
+			\barskill{\faMusic}{Resilience}{95}
 
 	\profilesection{Languages}
 		\pointskill{\flag{IN.png}}{Haryanavi}{5}
@@ -179,12 +188,12 @@
 %-------------------------ABOUT ME--------------------------------------------
 \cvsection{About Me}
 	\aboutme{
-        I am passionate about combining and improving traditional actuarial models with data science and machine learning methods. I am proficient in SQL, SAS, Python, R, TW-Emblem, Classifier, Radar and git. I have trained and successfully led actuarial teams in building automated and reproducible data and modelling pipelines with visual dashboards to reduce time spent on mundane tasks and instead focus on better models and analyses to gather meaningful and actionable insights.
+        An experienced actuary and data scientist with a proven track record of successfully leading and training actuarial teams on P\&C pricing and analytics projects. Proficient in SQL, SAS, Python, R, TW-Emblem, Classifier, Radar and git; I am passionate about combining and improving traditional actuarial models by using data science and machine learning techniques. I have supported and enabled actuarial teams in building automated and reproducible analyses thereby reducing the time spent on mundane tasks and increasing the time spent on improving models and generating meaningful and actionable insights.
     }
 
 %-------------------------WORK EXPERIENCE--------------------------------------------
 \cvsection{Work Experience}
-	\begin{cvtable}[2.5]
+	\begin{cvtable}[4]
 
 		%-------------------------AXA------------------------------
 		\cvitem
@@ -194,9 +203,9 @@
 			{
 				\vspace{-\topsep}
 				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-					\item Lead a team of actuaries and data scientists to transform models and analyses based on SAS, Emblem and Excel into those based on Python, SQL, R and git.
-					\item Built automated data pipelines with testing and visualisation dashboards to reduce the time needed to build the first models from 4-6 weeks to 1-2 days.
-					\item Developed best practices and trained actuarial teams for working with Python and git.
+					\item Lead transformation projects to rebuild exisiting SAS, Emblem and Excel based models and analyses using Python, SQL, R and git.
+					\item Built automated data pipelines and visual dashboards to significantly reduce the time needed to build the first models.
+					\item Developed best practices and trained actuarial teams for working efficiently and effectively with Python and git.
 				\end{itemize}
 			}
 		%-------------------------DELOITTE------------------------------
@@ -207,8 +216,8 @@
 			{
 				\vspace{-\topsep}
 				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-  					\item Supported developing Deloitte's P\&C pricing consulting in Germany.
-  					\item Developed tools in R for SolvencyII and IFRS17 projects.
+  					\item Led initial development of Deloitte's P\&C pricing and analytics offering in Germany.
+  					\item Developed tools and tests in R and SAS for SolvencyII and IFRS17 projects.
 				\end{itemize}
 			}
 		%-------------------------GENERALI DEUTSCHLAND------------------------------
@@ -235,7 +244,7 @@
 				\vspace{-\topsep}
 				\begin{itemize}[nosep, leftmargin=0pt] % , label={-}
 					\item Developed P\&C pricing and monitoring best practices and guidelines.
-					\item Successfully led pricing and analytics projects in Italy, Germany, Netherlands, Belgium and Czech Republic.
+					\item Successfully led and supported pricing and analytics projects in Italy, Germany, Netherlands, Belgium and Czech Republic.
 					\item Trained local actuaries on technical pricing using SAS, Emblem, Classifier and Radar etc.
 				\end{itemize}
 			}
@@ -265,6 +274,16 @@
 
 %-------------------------EDUCATION--------------------------------------------
 
+% \cvsection{Education}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN - PAGE 2
+%-------------------------------------------------------------------------------
+
+\newpage
+\makebacksidebar
+
 \cvsection{Education}
 
 	\cvsubsection{Professional}
@@ -274,22 +293,21 @@
 				{2011 -- 2012}
 				{Institute and Faculty of Actuaries}
 				{UK}
-				{
-					\vspace{-\topsep}
-					\begin{itemize}[nosep, leftmargin=0pt, label={}]
-						\item Exams CT1, CT2, CT3 and CT7
-					\end{itemize}
-				}
-				% {Exams CT1, CT2, CT3 and CT7}
 				% {
 				% 	\vspace{-\topsep}
 				% 	\begin{itemize}[nosep, leftmargin=0pt, label={}]
-				% 		\item CT1 - Financial Mathematics
-				% 		\item CT2 - Finance and Financial Reporting
-				% 		\item CT3 - Probability and Mathematical Statistics
-				% 		\item CT7 - Business Economics
+				% 		\item Exams CT1, CT2, CT3 and CT7
 				% 	\end{itemize}
 				% }
+				{
+					\vspace{-\topsep}
+					\begin{itemize}[nosep, leftmargin=0pt, label={}]
+						\item CT1 - Financial Mathematics
+						\item CT2 - Finance and Financial Reporting
+						\item CT3 - Probability and Mathematical Statistics
+						\item CT7 - Business Economics
+					\end{itemize}
+				}
 		%-------------------------SOA, US------------------------------
 			\cvitem
 				{2009}
@@ -303,14 +321,6 @@
 				}
 		\end{cvtable}
 
-%-------------------------------------------------------------------------------
-%                         TABLE ENTRIES RIGHT COLUMN - PAGE 2
-%-------------------------------------------------------------------------------
-
-\newpage
-\makebacksidebar
-
-\cvsection{Education}
 	\cvsubsection{Formal}
 		\begin{cvtable}[2]
 		%-------------------------MIB------------------------------

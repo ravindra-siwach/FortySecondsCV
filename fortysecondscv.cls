@@ -82,7 +82,7 @@
 \newlength\sidebartextwidth
 % default values
 \setlength{\sidebarwidth}{0.34\paperwidth}
-\setlength{\topbottommargin}{0.04\paperheight}
+\setlength{\topbottommargin}{0.06\paperheight}
 \setlength{\leftrightmargin}{0.02\paperwidth}
 % user overwrites
 \DeclareOptionX{sidebarwidth}{\setlength{\sidebarwidth}{#1}}
@@ -256,7 +256,7 @@
 \newcommand*{\cvsection}[1]{\section*{#1}}
 \titleformat{\section}%
 	{\color{sectioncolor}\normalfont\bfseries\LARGE}{}{0pt}{}
-\titlespacing*{\section}{0pt}{4ex}{1ex}
+\titlespacing*{\section}{0pt}{4ex}{2ex}
 
 % grey subsection style for right column
 \newcommand*{\cvsubsection}[1]{\subsection*{#1}}
@@ -469,7 +469,7 @@
 				(0, 0) rectangle (1, 1);
 			\draw[fill, iconcolor!70, rounded corners=0.5em]
 				(0, 0) rectangle (#3/100, 1);
-			\node[above right] at (0, 1) {\cvicon{#1} ~ \sidetext{#2}};
+			\node[above right] at (0, 1) {\sidetext{#2}};
 	\end{tikzpicture}
 	\par
 }
