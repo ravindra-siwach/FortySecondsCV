@@ -736,7 +736,7 @@
 \newcommand{\cvitemoneblock}[5]{%
     \parbox[t]{0.99\textwidth}{%
         \textbf{#1} \hfill\textbf{#2}
-        \par {\textit{#3}} \hfill{\textit{#4}}
+        \par {\textit{#3}} \hfill\textit{#4}
         \par #5 \vspace{\parsep}%
     }\\
 }
