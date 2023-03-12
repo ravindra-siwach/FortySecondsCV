@@ -47,9 +47,9 @@
 \RequirePackage{calc}
 % change page margins
 \RequirePackage[
-	nohead,
-	nofoot,
-	nomarginpar,
+    nohead,
+    nofoot,
+    nomarginpar,
 ]{geometry}
 
 % pre-define some colors the user can choose from
@@ -127,22 +127,22 @@
 \newtoggle{tshowframes}
 \togglefalse{tshowframes}
 \DeclareOptionX{showframes}{
-	\geometry{showframe}
-	\TPoptions{showboxes=true}
-	\toggletrue{tshowframes}
-	% adding \hline in \newenvironment directly doesn't work, so do it here...
-	\AtBeginDocument{\apptocmd{\personaldata}{\hline}{}{}}
+    \geometry{showframe}
+    \TPoptions{showboxes=true}
+    \toggletrue{tshowframes}
+    % adding \hline in \newenvironment directly doesn't work, so do it here...
+    \AtBeginDocument{\apptocmd{\personaldata}{\hline}{}{}}
 }
 
 % draw vertical guideline
 \newcommand{\plotvline}{}
 \DeclareOptionX{vline}{%
-	% must be defined here as macro, b/c tikz won't expand absolute length in
-	% \backgroundsetup -- BUG?
-	\renewcommand{\plotvline}{%
-		\draw [thick, red, opacity=0.7]
-		(\leftrightmargin + #1, 0) -- (\leftrightmargin + #1, -\paperheight);
-	}
+    % must be defined here as macro, b/c tikz won't expand absolute length in
+    % \backgroundsetup -- BUG?
+    \renewcommand{\plotvline}{%
+        \draw [thick, red, opacity=0.7]
+        (\leftrightmargin + #1, 0) -- (\leftrightmargin + #1, -\paperheight);
+    }
 }
 
 % pass further options to base class and load it
@@ -157,19 +157,19 @@
 % let geometry package perform the changes;
 % must come after loading the base class to prevent overwriting
 \ifthenelse{\equal{\sidebarplacement}{right}}{%
-	\geometry{
-		top=\topbottommargin,
-		bottom=\topbottommargin,
-		right=\sidebarwidth + \leftrightmargin,
-		left=\leftrightmargin,
-	}
+    \geometry{
+        top=\topbottommargin,
+        bottom=\topbottommargin,
+        right=\sidebarwidth + \leftrightmargin,
+        left=\leftrightmargin,
+    }
 }{% else
-	\geometry{
-		top=\topbottommargin,
-		bottom=\topbottommargin,
-		left=\sidebarwidth + \leftrightmargin,
-		right=\leftrightmargin,
-	}
+    \geometry{
+        top=\topbottommargin,
+        bottom=\topbottommargin,
+        left=\sidebarwidth + \leftrightmargin,
+        right=\leftrightmargin,
+    }
 }
 
 %-------------------------------------------------------------------------------
@@ -193,18 +193,18 @@
 \RequirePackage{ifxetex}
 \newif\ifxetexorluatex
 \ifxetex
-	\xetexorluatextrue
+    \xetexorluatextrue
 \else
-	\ifluatex
-		\xetexorluatextrue
-	\else
-		\xetexorluatexfalse
-	\fi
+    \ifluatex
+        \xetexorluatextrue
+    \else
+        \xetexorluatexfalse
+    \fi
 \fi
 
 % pictures, icons and drawings
 \ifxetexorluatex
-	\RequirePackage{academicons}
+    \RequirePackage{academicons}
 \fi
 \RequirePackage{fontawesome5}
 \RequirePackage{tikz}
@@ -255,18 +255,18 @@
 % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before>}[<after>]
 \newcommand*{\cvsection}[1]{\section*{#1}}
 \titleformat{\section}%
-	{\color{sectioncolor}\normalfont\bfseries\LARGE}{}{0pt}{}
+{\color{sectioncolor}\normalfont\bfseries\LARGE}{}{0pt}{}
 \titlespacing*{\section}{0pt}{4ex}{2ex}
 
 % grey subsection style for right column
 \newcommand*{\cvsubsection}[1]{\subsection*{#1}}
 \titleformat{\subsection}%
-	{\color{subsectioncolor}\normalfont\large}{}{0pt}{}
+{\color{subsectioncolor}\normalfont\large}{}{0pt}{}
 
 % abuse subsubsection as profilesection in left column
 \newcommand*{\profilesection}[1]{\subsubsection*{#1}}
 \titleformat{\subsubsection}
-	{\color{pseccolor}\normalfont\huge}{}{0pt}{\color{pseccolor}\sectionline}
+{\color{pseccolor}\normalfont\huge}{}{0pt}{\color{pseccolor}\sectionline}
 % set spaces before and after profilesections: <left><before><after>
 % "starred version kills the indentation of the paragraph following the title"
 \titlespacing*{\subsubsection}{0pt}{1ex}{1ex}
@@ -285,45 +285,45 @@
 % profile picture (optional)
 \newcommand{\plotprofilepicture}{}
 \newcommand*{\cvprofilepic}[1]{
-	\renewcommand{\cvprofilepic}{#1}
+    \renewcommand{\cvprofilepic}{#1}
 
-	\ifthenelse{\equal{\profilepicstyle}{profilecircle}}{
-		\renewcommand{\plotprofilepicture}{\profilecircle}
-	}{
-		\renewcommand{\plotprofilepicture}{\profileroundedcorners}
-	}
+    \ifthenelse{\equal{\profilepicstyle}{profilecircle}}{
+        \renewcommand{\plotprofilepicture}{\profilecircle}
+    }{
+        \renewcommand{\plotprofilepicture}{\profileroundedcorners}
+    }
 }
 
 % additional logo (optional)
 \newcommand{\plotlogobefore}{}
 \newcommand{\plotlogoafter}{}
 \newcommand*{\cvlogopic}[1]{%
-	% default = before; if any other (incl. 'after') --> after
-	\ifthenelse{\equal{\logoposition}{before}}{%
-		\renewcommand{\plotlogobefore}{%
-			\begin{figure}\centering%
-				\includegraphics[align=c, width=\logowidth]{#1}%
-			\end{figure}
-			\vspace*{\logospace}%
-		}%
-	}{%
-		\renewcommand{\plotlogoafter}{%
-			\vspace*{\logospace}%
-			\begin{figure}\centering%
-				\includegraphics[align=c, width=\logowidth]{#1}%
-			\end{figure}
-		}%
-	}
+    % default = before; if any other (incl. 'after') --> after
+    \ifthenelse{\equal{\logoposition}{before}}{%
+        \renewcommand{\plotlogobefore}{%
+            \begin{figure}\centering%
+                \includegraphics[align=c, width=\logowidth]{#1}%
+            \end{figure}
+            \vspace*{\logospace}%
+        }%
+    }{%
+        \renewcommand{\plotlogoafter}{%
+            \vspace*{\logospace}%
+            \begin{figure}\centering%
+                \includegraphics[align=c, width=\logowidth]{#1}%
+            \end{figure}
+        }%
+    }
 }
 
 % social network item; \social{<icon>}{<url>}{<text>}
 \newcommand*{\social}[3]{%
-	\socialicon{#1} & \href{#2}{\sidetext{#3}}\\%
+    \socialicon{#1} & \href{#2}{\sidetext{#3}}\\%
 }
 
 % personal information item; \personal{<icon>}{<text>}
 \newcommand*{\personal}[2]{%
-	\circleicon{#1} & {\sidetext{#2}}\\%
+    \circleicon{#1} & {\sidetext{#2}}\\%
 }
 
 % other personal information as macro that can be used later. Usage:
@@ -331,7 +331,7 @@
 % icon can be taken from FontAwesome or Academicon for example
 \newcommand{\personaldata}{}
 \newcommand*{\cvcustomdata}[2]{%
-	\apptocmd{\personaldata}{\personal{#1}{#2}}{}{}%
+    \apptocmd{\personaldata}{\personal{#1}{#2}}{}{}%
 }
 
 % useful shortcuts
@@ -345,100 +345,100 @@
 \newcommand*{\cvgit}[2]{\cvcustomdata{\faGithub}{\href{#1}{#2}}}
 \newcommand*{\cvlinkedin}[2]{\cvcustomdata{\faLinkedin}{\href{#1}{#2}}}
 \newcommand*{\cvkey}[2]{\cvcustomdata{\faKey}{%
-	\href{https://keyserver.ubuntu.com/pks/lookup?search=#2\&op=vindex\&fingerprint=on}{#1}%
-}}
+        \href{https://keyserver.ubuntu.com/pks/lookup?search=#2\&op=vindex\&fingerprint=on}{#1}%
+    }}
 
 % TODO find a cleaner solution for consistent spacing
 \newcommand{\nameandjob}{%
-	{\Huge\color{maincolor}\cvname}\par%
-	\setlength{\parskip}{2ex}
-	{\Large\color{black!80}\cvjobtitle}\par%
-	\setlength{\parskip}{1ex}
+    {\Huge\color{maincolor}\cvname}\par%
+    \setlength{\parskip}{2ex}
+    {\Large\color{black!80}\cvjobtitle}\par%
+    \setlength{\parskip}{1ex}
 }
 
 \newcommand{\profileroundedcorners}{%
-	\begin{figure}\centering
-		% see TikZ/pgf v3.1.1 manual §2.11 (clipping), §14.5 (rounded corners),
-		% §12 (scopes), §13.2 (coordinate systems)
-		\begin{tikzpicture}[x=\profilepicsize, y=\profilepicsize]
-			\begin{scope}
-				\path[clip]
-					(0, 0) [sharp corners] --
-					(0, 1) [rounded corners=\profilepicrounding] --
-					(1, 1) [sharp corners] --
-					(1, 0) [rounded corners=\profilepicrounding] -- cycle;
-				\node[anchor=center, inner sep=0pt, xshift=\profilepicxshift,
-						yshift=\profilepicyshift] (profilepic) at (0.5, 0.5)
-					{\includegraphics[width=\profilepiczoom\profilepicsize]
-						{\cvprofilepic}};
-			\end{scope}
-			\ifdim \profilepicborderwidth > 0pt
-				\begin{scope}
-					\draw[line width=\profilepicborderwidth, color=iconcolor]
-					(0, 0) [sharp corners] --
-					(0, 1) [rounded corners=\profilepicrounding] --
-					(1, 1) [sharp corners] --
-					(1, 0) [rounded corners=\profilepicrounding] -- cycle;
-				\end{scope}
-			\fi
-		\end{tikzpicture}
-	\end{figure}
+    \begin{figure}\centering
+        % see TikZ/pgf v3.1.1 manual §2.11 (clipping), §14.5 (rounded corners),
+        % §12 (scopes), §13.2 (coordinate systems)
+        \begin{tikzpicture}[x=\profilepicsize, y=\profilepicsize]
+            \begin{scope}
+                \path[clip]
+                (0, 0) [sharp corners] --
+                (0, 1) [rounded corners=\profilepicrounding] --
+                (1, 1) [sharp corners] --
+                (1, 0) [rounded corners=\profilepicrounding] -- cycle;
+                \node[anchor=center, inner sep=0pt, xshift=\profilepicxshift,
+                    yshift=\profilepicyshift] (profilepic) at (0.5, 0.5)
+                {\includegraphics[width=\profilepiczoom\profilepicsize]
+                    {\cvprofilepic}};
+            \end{scope}
+            \ifdim \profilepicborderwidth > 0pt
+                \begin{scope}
+                    \draw[line width=\profilepicborderwidth, color=iconcolor]
+                    (0, 0) [sharp corners] --
+                    (0, 1) [rounded corners=\profilepicrounding] --
+                    (1, 1) [sharp corners] --
+                    (1, 0) [rounded corners=\profilepicrounding] -- cycle;
+                \end{scope}
+            \fi
+        \end{tikzpicture}
+    \end{figure}
 }
 
 \newcommand{\profilecircle}{%
-	\begin{figure}\centering
-		\begin{tikzpicture}[x=\profilepicsize, y=\profilepicsize]
-			\begin{scope}
-				\clip (0, 0) circle (0.5);
-				\node[anchor=center, inner sep=0pt, outer sep=0pt,
-						xshift=\profilepicxshift, yshift=\profilepicyshift]
-					(profilepic) at (0,0) {
-				\includegraphics[width=\profilepiczoom\profilepicsize]
-					{\cvprofilepic}};
-			\end{scope}
-			\ifdim \profilepicborderwidth > 0pt
-				\begin{scope}
-					\draw[line width=\profilepicborderwidth, color=iconcolor]
-						(0, 0) circle (0.5\profilepicsize);
-				\end{scope}
-			\fi
-		\end{tikzpicture}
-	\end{figure}
+    \begin{figure}\centering
+        \begin{tikzpicture}[x=\profilepicsize, y=\profilepicsize]
+            \begin{scope}
+                \clip (0, 0) circle (0.5);
+                \node[anchor=center, inner sep=0pt, outer sep=0pt,
+                    xshift=\profilepicxshift, yshift=\profilepicyshift]
+                (profilepic) at (0,0) {
+                    \includegraphics[width=\profilepiczoom\profilepicsize]
+                    {\cvprofilepic}};
+            \end{scope}
+            \ifdim \profilepicborderwidth > 0pt
+                \begin{scope}
+                    \draw[line width=\profilepicborderwidth, color=iconcolor]
+                    (0, 0) circle (0.5\profilepicsize);
+                \end{scope}
+            \fi
+        \end{tikzpicture}
+    \end{figure}
 }
 
 % table with 2 columns for icons and text
 % \icontable{<width 1st column>}{<space between columns>}{<arraystretch>}
 \newenvironment{icontable}[3][1]%
 {%
-	\renewcommand{\arraystretch}{#1}% increase linespacing in tables; default=1
-	\iftoggle{tshowframes}{%
-		% https://tex.stackexchange.com/a/42331
-		\tabularx{\sidebartextwidth}{|m{#2} | @{\hskip #3} | X|} \hline%
-	}{%
-		\tabularx{\sidebartextwidth}{m{#2} @{\hskip #3} X}%
-	}
+\renewcommand{\arraystretch}{#1}% increase linespacing in tables; default=1
+\iftoggle{tshowframes}{%
+% https://tex.stackexchange.com/a/42331
+\tabularx{\sidebartextwidth}{|m{#2} | @{\hskip #3} | X|} \hline%
 }{%
-	\endtabularx%
+\tabularx{\sidebartextwidth}{m{#2} @{\hskip #3} X}%
+}
+}{%
+\endtabularx%
 }
 
 % icon style for personal information
 \newcommand*\circleicon[1]{%
-	\tikz[baseline = (char.base)]{%
-		\node[%
-			shape=circle,%
-			draw,%
-			inner sep=1pt,%
-			fill=iconcolor,%
-			maincolor,%
-			text=white,%
-			minimum size=\hsize%
-		] (char) {#1};%
-	}%
+    \tikz[baseline = (char.base)]{%
+        \node[%
+            shape=circle,%
+            draw,%
+            inner sep=1pt,%
+            fill=iconcolor,%
+            maincolor,%
+            text=white,%
+            minimum size=\hsize%
+        ] (char) {#1};%
+    }%
 }
 
 % icon style for social network
 \newcommand*{\socialicon}[1]{%
-	\resizebox{\hsize}{!}{\textcolor{iconcolor}{#1}}%
+    \resizebox{\hsize}{!}{\textcolor{iconcolor}{#1}}%
 }
 
 % make sure about me text stays in textbox frame
@@ -452,143 +452,143 @@
 % | [indent] [icon]  description  \hfill  ● ● ● ○ ○ |
 % -- inspired by arravc.cls by LianTze Lim: https://github.com/liantze/AltaCV
 \NewDocumentCommand{\pointskill}{ O{0em} m m m O{5} }{%
-	\hspace{#1} \cvicon{#2} ~ \sidetext{#3} \hfill%
-	\foreach \x in {1,...,#5}{%
-		\space%
-		{\ifnumgreater{\x}{#4}{\color{skillbg}}{\color{iconcolor}}% from etoolbox
-		% don't use totalheight; see https://tex.stackexchange.com/a/41014
-		\raisebox{0.5\height-0.4ex}{\scriptsize\faCircle}%
-		}
-	}\par%
+    \hspace{#1} \cvicon{#2} ~ \sidetext{#3} \hfill%
+    \foreach \x in {1,...,#5}{%
+            \space%
+            {\ifnumgreater{\x}{#4}{\color{skillbg}}{\color{iconcolor}}% from etoolbox
+                % don't use totalheight; see https://tex.stackexchange.com/a/41014
+                \raisebox{0.5\height-0.4ex}{\scriptsize\faCircle}%
+            }
+        }\par%
 }
 
 \newcommand{\barskill}[3]{
-	% remove 1pt in width to prevent overfull box warnings
-	\begin{tikzpicture}[x=\sidebartextwidth-1pt, y=2ex]
-			\draw[fill, skillbg, rounded corners=0.5em]
-				(0, 0) rectangle (1, 1);
-			\draw[fill, iconcolor!70, rounded corners=0.5em]
-				(0, 0) rectangle (#3/100, 1);
-			\node[above right] at (0, 1) {\sidetext{#2}};
-	\end{tikzpicture}
-	\par
+    % remove 1pt in width to prevent overfull box warnings
+    \begin{tikzpicture}[x=\sidebartextwidth-1pt, y=2ex]
+        \draw[fill, skillbg, rounded corners=0.5em]
+        (0, 0) rectangle (1, 1);
+        \draw[fill, iconcolor!70, rounded corners=0.5em]
+        (0, 0) rectangle (#3/100, 1);
+        \node[above right] at (0, 1) {\sidetext{#2}};
+    \end{tikzpicture}
+    \par
 }
 
 % \skill[<indent>]{<icon>}{<description>} creates in sidebar
 % | [indent] [icon]  some longer skill description  |
 \newcommand{\skill}[3][0em]{
-	\hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{\sidetext{#3}}%
-	\hfill \par%
+    \hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{\sidetext{#3}}%
+    \hfill \par%
 }
 
 % label for wheel charts
 \newcommand{\chartlabel}[1]{%
-	\begin{tikzpicture}
-	\node[
-		fill=skillbg!25, % interior color
-		anchor=base,
-		draw=skillbg, % line color
-		rounded corners,
-		inner xsep=1ex, % distance from left/right border to text
-		inner ysep=0.75ex, % distance top/bottom border to text
-		text height=1.5ex, % align text vertically in box (at least as resulting
-		text depth=.25ex   % effect)
-	]{\sidetext{#1}};%
-	\end{tikzpicture}
+    \begin{tikzpicture}
+        \node[
+            fill=skillbg!25, % interior color
+            anchor=base,
+            draw=skillbg, % line color
+            rounded corners,
+            inner xsep=1ex, % distance from left/right border to text
+            inner ysep=0.75ex, % distance top/bottom border to text
+            text height=1.5ex, % align text vertically in box (at least as resulting
+            text depth=.25ex   % effect)
+        ]{\sidetext{#1}};%
+    \end{tikzpicture}
 }
 
 
 \newenvironment{sidebarminipage}%
-	{\begin{minipage}{\sidebartextwidth}}%
-	{\end{minipage}}%
+{\begin{minipage}{\sidebartextwidth}}%
+        {\end{minipage}}%
 
 
 \newenvironment{memberships}[1][1em]%
 {%
-	\iftoggle{tshowframes}{%
-		\tabularx{\sidebartextwidth}{|l | @{\hskip #1} | X|} \hline%
-	}{%
-		\tabularx{\sidebartextwidth}{l @{\hskip #1} X}%
-	}
+    \iftoggle{tshowframes}{%
+        \tabularx{\sidebartextwidth}{|l | @{\hskip #1} | X|} \hline%
+    }{%
+        \tabularx{\sidebartextwidth}{l @{\hskip #1} X}%
+    }
 }{%
-	\endtabularx%
+    \endtabularx%
 }%
 
 
 \newcommand{\membership}[3][4em]{
-	\includegraphics[align=c,width=#1]{#2} & \sidetext{#3} \\[3ex]
+    \includegraphics[align=c,width=#1]{#2} & \sidetext{#3} \\[3ex]
 }
 
 % adapted from https://tex.stackexchange.com/a/82729
 \newcommand{\wheelchart}[4][-90]{%
-	\def\outerradius{#2}%
-	\def\innerradius{#3}%
-	% Calculate total
-	\pgfmathsetmacro{\totalnum}{0}%
-	\foreach\value/\colour/\name in {#4} {%
-		\pgfmathparse{\value+\totalnum}%
-		\global\let\totalnum=\pgfmathresult%
-	}%
-	\begin{tikzpicture}
+    \def\outerradius{#2}%
+    \def\innerradius{#3}%
+    % Calculate total
+    \pgfmathsetmacro{\totalnum}{0}%
+    \foreach\value/\colour/\name in {#4} {%
+            \pgfmathparse{\value+\totalnum}%
+            \global\let\totalnum=\pgfmathresult%
+        }%
+    \begin{tikzpicture}
 
-		% Calculate the thickness and the middle line of the wheel
-		\pgfmathsetmacro{\wheelwidth}{\outerradius-\innerradius}
-		\pgfmathsetmacro{\midradius}{(\outerradius+\innerradius)/2}
+        % Calculate the thickness and the middle line of the wheel
+        \pgfmathsetmacro{\wheelwidth}{\outerradius-\innerradius}
+        \pgfmathsetmacro{\midradius}{(\outerradius+\innerradius)/2}
 
-		% Rotate so we start from the top
-		\begin{scope}[rotate=#1, on background layer]
-		% Loop through each value set. \cumnum keeps track of where we are in the
-		% wheel
-		\pgfmathsetmacro{\cumnum}{0}
-		\foreach \value/\width/\colour/\name in {#4} {
-			\pgfmathsetmacro{\newcumnum}{\cumnum + \value/\totalnum*360}
+        % Rotate so we start from the top
+        \begin{scope}[rotate=#1, on background layer]
+            % Loop through each value set. \cumnum keeps track of where we are in the
+            % wheel
+            \pgfmathsetmacro{\cumnum}{0}
+            \foreach \value/\width/\colour/\name in {#4} {
+                    \pgfmathsetmacro{\newcumnum}{\cumnum + \value/\totalnum*360}
 
-			% Calculate the percent value
-			\pgfmathsetmacro{\percentage}{\value/\totalnum*100}
-			% Calculate the mid angle of the colour segments to place the labels
-			\pgfmathsetmacro{\midangle}{-(\cumnum+\newcumnum)/2}
+                    % Calculate the percent value
+                    \pgfmathsetmacro{\percentage}{\value/\totalnum*100}
+                    % Calculate the mid angle of the colour segments to place the labels
+                    \pgfmathsetmacro{\midangle}{-(\cumnum+\newcumnum)/2}
 
-			% This is necessary for the labels to align nicely
-			\pgfmathparse{
-				(-\midangle>180?"west":"east")
-			} \edef\textanchor{\pgfmathresult}
-			\pgfmathparse{
-				(-\midangle>180?"flush left":"flush right")
-			} \edef\textalign{\pgfmathresult}
-			\pgfmathsetmacro\labelshiftdir{1-2*(-\midangle<180)}
+                    % This is necessary for the labels to align nicely
+                    \pgfmathparse{
+                        (-\midangle>180?"west":"east")
+                    } \edef\textanchor{\pgfmathresult}
+                    \pgfmathparse{
+                        (-\midangle>180?"flush left":"flush right")
+                    } \edef\textalign{\pgfmathresult}
+                    \pgfmathsetmacro\labelshiftdir{1-2*(-\midangle<180)}
 
-			% Draw the color segments. Somehow, the \midrow units got lost, so
-			% we add 'pt' at the end. Not nice...
-			\filldraw[draw=white,fill=\colour]
-				(-\cumnum:\outerradius)
-				arc (-\cumnum:-(\newcumnum):\outerradius)
-				-- (-\newcumnum:\innerradius)
-				arc (-\newcumnum:-(\cumnum):\innerradius)
-				-- cycle;
+                    % Draw the color segments. Somehow, the \midrow units got lost, so
+                    % we add 'pt' at the end. Not nice...
+                    \filldraw[draw=white,fill=\colour]
+                    (-\cumnum:\outerradius)
+                    arc (-\cumnum:-(\newcumnum):\outerradius)
+                    -- (-\newcumnum:\innerradius)
+                    arc (-\newcumnum:-(\cumnum):\innerradius)
+                    -- cycle;
 
-			% Draw the data labels
-			\draw [*-,thin,wheelchartlabelcolor] node [append after command={
-				(\midangle:\midradius pt) --
-				(\midangle:\outerradius + 1ex) --
-				(\tikzlastnode)}] at (\midangle:\outerradius + 1ex) [
-				xshift=\labelshiftdir*0.5cm,inner sep=1ex,
-				outer sep=0pt,
-				text width=\width,
-				anchor=\textanchor,
-				align=\textalign,
-				font=\small,
-				text=wheeltextcolor
-			]{\name};
-			% Set the old cumulated angle to the new value
-			\global\let\cumnum=\newcumnum
-		}
-		\end{scope}
-	\end{tikzpicture}\par
+                    % Draw the data labels
+                    \draw [*-,thin,wheelchartlabelcolor] node [append after command={
+                                (\midangle:\midradius pt) --
+                                (\midangle:\outerradius + 1ex) --
+                                (\tikzlastnode)}] at (\midangle:\outerradius + 1ex) [
+                        xshift=\labelshiftdir*0.5cm,inner sep=1ex,
+                        outer sep=0pt,
+                        text width=\width,
+                        anchor=\textanchor,
+                        align=\textalign,
+                        font=\small,
+                        text=wheeltextcolor
+                    ]{\name};
+                    % Set the old cumulated angle to the new value
+                    \global\let\cumnum=\newcumnum
+                }
+        \end{scope}
+    \end{tikzpicture}\par
 }
 
 \newcommand{\cvsignature}{
-	\vfill
-	{\large\bfseries\color{maincolor!70}\today \hfill \cvname}
+    \vfill
+    {\large\bfseries\color{maincolor!70}\today \hfill \cvname}
 }
 
 
@@ -597,33 +597,33 @@
 %-------------------------------------------------------------------------------
 % draw sidebar background on current page
 \newcommand{\drawSidebarBG}{%
-	\AddToShipoutPictureBG*{%
-		\ifthenelse{\equal{\sidebarplacement}{right}}{%
-			\begin{tikzpicture}[remember picture, overlay]
-				\node at (current page.north east)[
-					rectangle,
-					fill=sidecolor,
-					anchor=north east,
-					minimum width=\sidebarwidth,
-					minimum height=\paperheight,
-				]{};%
-				% plot vertical red guideline
-				\plotvline%
-			\end{tikzpicture}%
-		}{% else
-			\begin{tikzpicture}[remember picture, overlay]
-				\node[
-					rectangle,
-					fill=sidecolor,
-					anchor=north west,
-					minimum width=\sidebarwidth,
-					minimum height=\paperheight,
-				]{};%
-				% plot vertical red guideline
-				\plotvline%
-			\end{tikzpicture}%
-		}%
-	}%
+    \AddToShipoutPictureBG*{%
+        \ifthenelse{\equal{\sidebarplacement}{right}}{%
+            \begin{tikzpicture}[remember picture, overlay]
+                \node at (current page.north east)[
+                    rectangle,
+                    fill=sidecolor,
+                    anchor=north east,
+                    minimum width=\sidebarwidth,
+                    minimum height=\paperheight,
+                ]{};%
+                % plot vertical red guideline
+                \plotvline%
+            \end{tikzpicture}%
+        }{% else
+            \begin{tikzpicture}[remember picture, overlay]
+                \node[
+                    rectangle,
+                    fill=sidecolor,
+                    anchor=north west,
+                    minimum width=\sidebarwidth,
+                    minimum height=\paperheight,
+                ]{};%
+                % plot vertical red guideline
+                \plotvline%
+            \end{tikzpicture}%
+        }%
+    }%
 }%
 
 % use textpos to position textblock within TikZ background; we have to use
@@ -631,15 +631,15 @@
 % instead of \setlength{\TPHorizModule}{<dimen>}, which seems to be "absolute"
 % as opposed to "relative" - strange but true.
 \newenvironment{sidebar}{%
-	\drawSidebarBG%
-	\ifthenelse{\equal{\sidebarplacement}{right}}{%
-		\begin{textblock*}{\sidebartextwidth}%
-			(\paperwidth - \sidebarwidth + \leftrightmargin, \topbottommargin)
-	}{% else
-		\begin{textblock*}{\sidebartextwidth}(\leftrightmargin, \topbottommargin)
-	}%
-}{%
-	\end{textblock*}%
+\drawSidebarBG%
+\ifthenelse{\equal{\sidebarplacement}{right}}{%
+    \begin{textblock*}{\sidebartextwidth}%
+    (\paperwidth - \sidebarwidth + \leftrightmargin, \topbottommargin)
+}{% else
+    \begin{textblock*}{\sidebartextwidth}(\leftrightmargin, \topbottommargin)
+        }%
+        }{%
+    \end{textblock*}%
 }
 
 % provide user interface for easily adding new sections in side bars
@@ -650,46 +650,46 @@
 \newcommand{\addtobacksidebar}[1]{\apptocmd{\backsidebar}{#1}{}{}}
 
 \newcommand{\makefrontsidebar}{%
-	\begin{sidebar}
-		% most sidebar commands end with \par; increase space between them
-		\setlength{\parskip}{1ex}
+    \begin{sidebar}
+        % most sidebar commands end with \par; increase space between them
+        \setlength{\parskip}{1ex}
 
-		% optionally insert logo picture before profile
-		\plotlogobefore
+        % optionally insert logo picture before profile
+        \plotlogobefore
 
-		% optionally insert profile picture
-		\plotprofilepicture
+        % optionally insert profile picture
+        \plotprofilepicture
 
-		% optionally insert logo picture after profile
-		\plotlogoafter
+        % optionally insert logo picture after profile
+        \plotlogoafter
 
-		\vspace{1ex}
+        \vspace{1ex}
 
-		% name and job
-		\nameandjob
+        % name and job
+        \nameandjob
 
-		% personal information
-		\vspace*{0.5em}
-		\begin{icontable}[1.6]{1.7em}{0.4em}
-			\personaldata
-		\end{icontable}
+        % personal information
+        \vspace*{0.5em}
+        \begin{icontable}[1.6]{1.7em}{0.4em}
+            \personaldata
+        \end{icontable}
 
-		% user definitions
-		\frontsidebar
-	\end{sidebar}
+        % user definitions
+        \frontsidebar
+    \end{sidebar}
 }
 
 \newcommand{\makebacksidebar}{%
-	\begin{sidebar}
-		% begin with name instead of picture
-		\nameandjob
+    \begin{sidebar}
+        % begin with name instead of picture
+        \nameandjob
 
-		% make sure there is no space at top, but after cvjob
-		\setlength{\parskip}{1ex}
+        % make sure there is no space at top, but after cvjob
+        \setlength{\parskip}{1ex}
 
-		% user definitions
-		\backsidebar
-	\end{sidebar}
+        % user definitions
+        \backsidebar
+    \end{sidebar}
 }
 
 
@@ -702,35 +702,43 @@
 % cv list environment --> table, left aligned, width=textwidth
 % tabular starred version adds space to make table as wide as \textwidth here
 \newenvironment{cvtable}[1][1]{%
-	\renewcommand{\arraystretch}{#1}%
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}%
-}{%
-	\end{tabular*}%
+    \renewcommand{\arraystretch}{#1}%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}%
+        }{%
+    \end{tabular*}%
 }
 
 % | <keyword>      <one-line description>            |
 % use parbox if text needs to use multiple lines
 \newcommand{\cvitemshort}[2]{%
-	\parbox[t]{0.17\textwidth}{\raggedright\strut #1\strut}
-	& \parbox[t]{0.81\textwidth}{\strut #2\strut} \\}
+    \parbox[t]{0.17\textwidth}{\raggedright\strut #1\strut}
+    & \parbox[t]{0.81\textwidth}{\strut #2\strut} \\}
 
 % | <date>         <bold-title>  \hfill  <location>  |
 % |                <longer description>              |
 % or, if description is empty:
 % | <date>         <title>       \hfill  <location>  |
 \newcommand{\cvitem}[4]{%
-	\parbox[t]{0.17\textwidth}{\raggedright #1} &%
-	\parbox[t]{0.81\textwidth}{%
-		\if\relax\detokenize{#4}\relax%
-			\parbox[t]{\linewidth-\widthof{\footnotesize #3}-1em}{\raggedright #2}%
-			\hfill {\footnotesize#3}%
-		\else%
-			\parbox[t]{\linewidth-\widthof{\footnotesize #3}-1em}{%
-				\raggedright \textbf{#2}%
-			} \hfill {\footnotesize#3} \\%
-			\textcolor{itemtextcolor}{#4}%\vspace{\parsep}%
-		\fi%
-	}\\
+    \parbox[t]{0.17\textwidth}{\raggedright #1} &%
+    \parbox[t]{0.81\textwidth}{%
+        \if\relax\detokenize{#4}\relax%
+            \parbox[t]{\linewidth-\widthof{\footnotesize #3}-1em}{\raggedright #2}%
+            \hfill {\footnotesize#3}%
+        \else%
+            \parbox[t]{\linewidth-\widthof{\footnotesize #3}-1em}{%
+                \raggedright \textbf{#2}%
+            } \hfill {\footnotesize#3} \\%
+            \textcolor{itemtextcolor}{#4}%\vspace{\parsep}%
+        \fi%
+    }\\
+}
+
+\newcommand{\cvitemoneblock}[5]{%
+    \parbox[t]{0.99\textwidth}{%
+        \textbf{#1} \hfill\textbf{#2}
+        \par {\textit{#3}} \hfill{\textit{#4}}
+        \par #5 \vspace{\parsep}%
+    }\\
 }
 
 % publication item
@@ -739,10 +747,10 @@
 % |                <italic author>                   |
 % |                <journal>                         |
 \newcommand{\cvpubitem}[4]{%
-	\parbox[t]{0.17\textwidth}{\raggedright #4} &
-	\parbox[t]{0.81\textwidth}{%
-		\textbf{#1} \par \textit{#2} \par #3 \vspace{\parsep}%
-	}\\
+    \parbox[t]{0.17\textwidth}{\raggedright #4} &
+    \parbox[t]{0.81\textwidth}{%
+        \textbf{#1} \par \textit{#2} \par #3 \vspace{\parsep}%
+    }\\
 }
 
 % EOF - fortysecondscv.cls

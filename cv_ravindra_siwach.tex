@@ -8,6 +8,9 @@
 \usepackage{ragged2e}
 \usepackage{enumitem}
 
+% improve paragraph spacing and hyphenation
+\usepackage[skip=8pt plus1pt]{parskip}
+
 % uncomment in case you don't want any hyphenation
 \usepackage[none]{hyphenat}
 
@@ -235,36 +238,53 @@
 \begin{cvtable}%[2]
 
     %-------------------------MUNICH RE------------------------------
+    % \vspace{\topsep}
+    % \cvitem
+    % {Oct 2022 -- Present}
+    % {Pricing Actuary, Global Specialty}
+    % {Munich Re (Munich, Germany)}
+    % {
+    %     \vspace{\topsep}
+    %     \begin{itemize}[nosep, leftmargin=0pt , label={-}] %
+    %         \item Supporting Insurtech partners in launching new products\//markets.
+    %         \item Developing pricing strategy to increase profitability \& market share.
+    %         \item Monitoring portfolio performance and conducting competitive benchmarking analysis to identify vulnerabilities\//opportunities.
+    %         \item Coordinating with data team to ensure seamless data API integration.
+    %         \item Conducting actuarial due diligence for pricing and reserving to support acquisition of new portfolios.
+    %     \end{itemize}
+    % }
+
     \vspace{\topsep}
-    \cvitem
+    \cvitemoneblock
+    {Pricing Actuary, Global Specialty Insurance}
+    {Munich RE}
     {Oct 2022 -- Present}
-    {Pricing Actuary, Specialty Solutions}
-    {Munich Re (Munich, Germany)}
+    {Munich, Germany}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-            \item Collaborating with Insurtech partners to launch commercial P\&C products in new markets.
-            \item Developing pricing strategy to increase profitability \& market share.
-            \item Monitoring portfolio performance and conducting competitive benchmarking analysis to identify opportunities for improvement.
-            \item Coordinating with data team to ensure seamless API integration for a smooth data delivery from partners.
-            \item Conducting actuarial due diligence to support acquisition of new portfolios, ensuring accuracy and reliability of claims development and financial projections.
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}] %
+            \item Calculate Day1 prices for Insurtech partners for new products\//markets.
+            \item Develop pricing strategy to increase profitability and market share.
+            \item Conduct portfolio monitoring through leakage and competitive benchmarking.
+            \item Validate rates, reseves, financial projections for M\&A actuarial due diligence.
+            \item Coordinate seamless data API integration from partners.
         \end{itemize}
     }
 
     %-------------------------AXA------------------------------
     \vspace{\topsep}
-    \cvitem
+    \cvitemoneblock
+    {Project Manager and Senior Actuary}
+    {Axa}
     {Oct 2018 -- Sep 2022}
-    {Senior Actuary and Project Manager}
-    {Axa (Cologne, Germany)}
+    {Cologne, Germany}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-            \item Successfully leading interdisciplinary teams of actuaries and data scientists to transform P\&C pricing and analytics, migrating from legacy systems to AWS and implementing Python-based ML models.
-            \item Training and mentoring actuaries in Python and git to improve technical skills and collaboration efficiency.
-            \item Engineering automated ETL and ML pipelines to be used by different teams resulting in improved data quality and faster delivery.
-            \item Building pricing models as well as profitability and leakage analysis tools for different business lines to ensure more accurate pricing and to provide actionable insights for portfolio management.
-            \item Developing an IFRS17 data preparation tool for reinsurance and reserving teams, ensuring compliance and accuracy in financial reporting.
+        \begin{itemize}[nosep, leftmargin=12pt , label={-}] %
+            \item Managed interdisciplinary teams of actuaries and data scientists.
+            \item Led transformation of P\&C pricing and analytics landscape, migrating from legacy systems \/(SAS, WTW\/) to cloud \/(AWS\/) and implementing Python-based ML models.
+            \item Led pricing and leakage projects for improved pricing and portfolio management.
+            \item Engineered test-driven ETL and ML pipelines to improve accuracy and efficiency.
+            \item Trained actuaries on Python and git to improve collaboration and technical skills.
+            \item Developed Python data tool with reinsurance team for accurate IFRS17 reporting.
                   % \item Conduct regular review meetings with stakeholders
                   % \item Lead transformation projects to rebuild existing SAS, Emblem and Excel based models and analyses using Python, SQL, R and git.
                   % \item Build automated data pipelines and visual dashboards to significantly reduce the time needed to build the first models.
@@ -273,71 +293,74 @@
     }
     %-------------------------DELOITTE------------------------------
     \vspace{\topsep}
-    \cvitem
-    {Apr 2018 -- Sep 2018}
+    \cvitemoneblock
     {Senior Consultant}
-    {Deloitte (Cologne, Germany)}
+    {Deloitte}
+    {Apr 2018 -- Sep 2018}
+    {Cologne, Germany}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-            \item Leading technical development of initial P\&C pricing offering.
-            \item Conducting research and analysis on IFRS17, SolvencyII, and reserving, including researching edge cases for IFRS17 compliance.
+        \begin{itemize}[nosep, leftmargin=12pt , label={-}] %
+            \item Led technical development of initial P\&C pricing offering.
+            \item Supported IFRS17 implementation for client through edge cases research.
+            \item Developed R tool to analyse and validate actuarial reserves.
                   % \item Automated tool to read reserving triangle data and output in tabular form and vice versa in R.
                   % \item Defining IFRS17 test cases in SAS for product testing.
         \end{itemize}
     }
     %-------------------------GENERALI DEUTSCHLAND------------------------------
     \vspace{\topsep}
-    \cvitem
-    {Apr 2016 -- Mar 2018}
+    \cvitemoneblock
     {Senior Actuary and Data Scientist}
-    {Generali (Munich, Germany)}
+    {Generali}
+    {Apr 2016 -- Mar 2018}
+    {Munich, Germany}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-            \item Spearheading peril based price modelling for motor and household products as the lead actuary for accurate and competitive pricing.
-            \item Training and mentoring team members on efficient modelling techniques using Emblem, Classifier, Radar, SAS and R.
-            \item Collaboratively developing the company's first telematics cars insurance product which provided customers with personalized pricing based on their driving behaviour.
-            \item Designing automated monthly profitability and leakage reports in Radar to streamline management reporting.
+        \begin{itemize}[nosep, leftmargin=12pt , label={-}] %
+            \item Spearheaded peril based price modelling implementation for P\&C products as the lead actuary for accurate and competitive pricing.
+            \item Trained and mentored actuaries on Emblem, Classifier, Radar, SAS and R.
+            \item Supported development of company's first telematics cars insurance product.
+            \item Designed portfolio monitoring framework in Radar to streamline reporting.
             \item Implementing underwriting control models for SME liability business, resulting in improved risk management.
                   % \item Built underwriting control models for commercial liability insurance.
         \end{itemize}
     }
     %-------------------------GENERALI ITALY------------------------------
     \vspace{\topsep}
-    \cvitem
-    {Sep 2013 -- Apr 2016}
+    \cvitemoneblock
     {Actuary and Project Manager, Global P\&C}
-    {Generali (Trieste, Italy)}
+    {Generali}
+    {Sep 2013 -- Apr 2016}
+    {Trieste, Italy}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
-            \item Collaborating with group entities to identify and manage pricing and analytics projects, ensuring alignment with overall business strategy.
-            \item Developing P\&C pricing best practices and guidelines, resulting in improved pricing accuracy and consistency across entities.
-            \item Providing technical pricing training to local actuaries using SAS, Emblem, Classifier and Radar etc.
+        \begin{itemize}[nosep, leftmargin=12pt , label={-}] %
+            \item Managed pricing and analytics projects, ensuring alignment with overall business strategy.
+            \item Developed best practices and guidelines to streamline pricing across entities.
+            \item Developed technical price blueprint and conducted trainings for local actuaries.
         \end{itemize}
     }
     %-------------------------EVS------------------------------
     \vspace{\topsep}
-    \cvitem
+    \cvitemoneblock
+    {Market Research and Business Development Analyst}
+    {Evalueserve}
     {Feb 2007 -- Jul 2009}
-    {Market Research and Business Development}
-    {Evalueserve (Gurgaon, India)}
+    {Gurugram, India}
     {
-        % % \vspace{-\topsep}
-        % \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
+        % % \vspace{\topsep}
+        % \begin{itemize}[nosep, leftmargin=12pt , label={-}] %
         %     \item Managing and conducting market research, analytics and business development projects.
         % \end{itemize}
     }
     %-------------------------VERTEX------------------------------
     \vspace{\topsep}
-    \cvitem
-    {Oct 2004 -- Feb 2007}
+    \cvitemoneblock
     {Senior Business Associate}
-    {Vertex (Gurgaon, India)}
+    {Vertex}
+    {Oct 2004 -- Feb 2007}
+    {Gurugram, India}
     {
-        % \vspace{-\topsep}
-        % \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
+        % \vspace{\topsep}
+        % \begin{itemize}[nosep, leftmargin=12pt , label={-}] %
         %     \item Customer service.
         % \end{itemize}
     }
@@ -365,7 +388,7 @@
 %     {Vertex (Gurgaon, India)}
 %     {
 %         \vspace{-\topsep}
-%         \begin{itemize}[nosep, leftmargin=0pt] % , label={-}
+%         \begin{itemize}[nosep, leftmargin=0pt , label={-}] %
 %             \item Customer service.
 %         \end{itemize}
 %     }
