@@ -203,21 +203,14 @@
 		\pointskill{\flag{IN.png}}{Urdu}{3}
 
 	\profilesection{Interests}
-		\begin{figure}\centering
-			\smartdiagram[bubble diagram]{
-				\textcolor{white}{\textbf{Travelling}}, % center bubble
-				\textcolor{black!90}{Cooking},
-				\textcolor{black!90}{Languages} \\
-				\textcolor{black!90}{Dialects} \\
-				\textcolor{black!90}{Accents},
-				\textcolor{black!90}{Basketball},
-				% \textcolor{black!90}{Programming},
-				\textcolor{black!90}{Solving} \\
-				\textcolor{black!90}{Puzzles},
-				\textcolor{black!90}{New} \\
-				\textcolor{black!90}{technology}
-			}
-		\end{figure}
+    \begin{sidebarminipage}\raggedright
+        \chartlabel{Puzzles}
+        \chartlabel{Modern Tech}
+        \chartlabel{Basketball}
+        \chartlabel{Languages, Dialects and Accents}
+        \chartlabel{Cooking}
+        \chartlabel{Backpacking}
+    \end{sidebarminipage}
 }
 
 %-------------------------------------------------------------------------------
@@ -400,26 +393,31 @@
 \cvsection{Education}
 
 % \cvsubsection{Professional}
-\begin{cvtable}[2]
-    %-------------------------IFoA, UK------------------------------
-    \cvitem
-    {2013 -- 2014}
+\begin{cvtable}%[2]
+    %-------------------------MIB------------------------------
+    \vspace{\topsep}
+    \cvitemoneblock
     {Master in Insurance \& Risk Management}
-    {MIB School of Management (Trieste, Italy)}
+    {MIB School of Management}
+    {2013 -- 2014}
+    {Trieste, Italy}
     {
         % \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}] %
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}] %
             \item Graduated with Honours. Grade: 8.89/10.
                   % \item Thesis: Risk coherent KPIs for P\&C insurance under SolvencyII.
         \end{itemize}
     }
-    \cvitem
-    {2011 -- 2012}
+    %-------------------------IFoA, UK------------------------------
+    \vspace{\topsep}
+    \cvitemoneblock
+    {Actuarial Exams}
     {Institute and Faculty of Actuaries}
+    {2011 -- 2012}
     {UK}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
+        % \vspace{-\topsep}
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}]
             \item CT1, 2, 3 and 7
         \end{itemize}
     }
@@ -432,85 +430,54 @@
     %         \item CT7 - Business Economics
     %     \end{itemize}
     % }
-    %-------------------------SOA, US------------------------------
 
     %-------------------------EIILM------------------------------
-    \cvitem
-    {2009 -- 2012}
+    \vspace{\topsep}
+    \cvitemoneblock
     {Bachelors in Statistics and Economics}
-    {EIILM University (Sikkim, India)}
+    {EIILM University}
+    {2009 -- 2012}
+    {Sikkim, India}
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}]
             \item First Division
         \end{itemize}
     }
-    \cvitem
-    {2009}
+
+    %-------------------------SOA, US------------------------------
+    \vspace{\topsep}
+    \cvitemoneblock
+    {Actuarial Exam}
     {Society of Actuaries}
+    {2009}
     {USA}
     {
         \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}]
             \item Exam P - Probability, Grade 9/10
         \end{itemize}
     }
 \end{cvtable}
 % \cvsubsection{Formal}
 % \begin{cvtable}[2]
-%-------------------------MIB------------------------------
-% \end{cvtable}
+\cvsection{Trainings and Coursework}
 
-\cvsubsection{Other courses and certifications}
-\begin{cvtable}[2]
-    %-------------------------ONLINE------------------------------
-    \cvitem
-    {Present}
-    {Continuous learning}
-    {Online}
+\begin{cvtable}
+    %-------------------------MIB------------------------------
+    \vspace{\topsep}
+    \cvitemshortsingle
     {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
-            \item Online courses on Coursera, edX and Youtube etc. on Programming, R, Python, Julia, Machine Learning, Data Science and Data Engineering topics.
-        \end{itemize}
-    }
-    %-------------------------AXA------------------------------
-    \cvitem
-    {2019}
-    {Axa}
-    {Cologne, Germany}
-    {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
-            \item Agile Scrum and Kanban Product Owner training.
-        \end{itemize}
-    }
-    %-------------------------DELOITTE------------------------------
-    \cvitem
-    {2018}
-    {Deloitte}
-    {France and Germany}
-    {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
-            \item IFRS17 bootcamp.
-            \item SAS institute training for IFRS17 software.
-            \item Process mining with Celonis. (Training and Hackathon)
-        \end{itemize}
-    }
-    %-------------------------GENERALI------------------------------
-    \cvitem
-    {2013 -- 2016}
-    {Generali Academy}
-    {Trieste, Italy}
-    {
-        \vspace{-\topsep}
-        \begin{itemize}[nosep, leftmargin=0pt, label={}]
-            \item Towers Watson pricing software training
-            \item Statistical modelling in R
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}, topsep=0pt]
+            \item Agile project management using Scrum and Kanban
+            \item Deloitte University - IFRS17 bootcamp
+            \item SAS institute training for IFRS17 software
+            \item Process mining with Celonis - Training and Hackathon
+            \item Willis Towers Watson pricing suite
             \item Health Insurance - Product, Pricing and Reserving
+            \item Online courses on Programming in R, Python and Julia as well as on Machine Learning, Data Science and Data Engineering topics.
         \end{itemize}
     }
+
 \end{cvtable}
 
 %-------------------------VOLUNTEER WORK -----------------------------------
@@ -518,21 +485,23 @@
 \cvsection{Volunteering}
 \begin{cvtable}[1.1]
     \vspace{\topsep}
-    \cvitem
-    {Present}
+    \cvitemoneblocksingle
     {Caritas}
     {Cologne, Germany}
-    {Assisting immigrant children with English and Maths schoolwork and providing exam preparation support.}
+    {
+        \begin{itemize}[nosep, leftmargin=12pt, label={-}, topsep=0pt]\item Assisting immigrant children with English and Maths schoolwork and providing exam preparation support.
+        \end{itemize}
+    }
 \end{cvtable}
 
 %-------------------------AWARDS--------------------------------------------
 
 \cvsection{Awards \& Achievements}
 \begin{cvtable}[1.1]
-    \cvitemshort{2008}{Employee Performance Award at Evalueserve.}
-    \cvitemshort{2002}{Government scholarship recipient for being amongst the top 0.1\% scorers in India in Social Studies(98\%) and Science(99\%)}
-    \cvitemshort{2001}{School top scorer at National Mathematics Talent Competitions.}
-    \cvitemshort{2001}{Member of school and state Basketball teams.}
+    \cvitemshortsingle{2008 - Employee Performance Award at Evalueserve.}
+    \cvitemshortsingle{2002 - Top 0.1\% scorers in India in Social Studies(98\%) and Science(99\%)}
+    \cvitemshortsingle{2001 - School top scorer at National Mathematics Talent Competitions.}
+    \cvitemshortsingle{2001 - Member of school and state Basketball teams.}
 \end{cvtable}
 
 %-------------------------SIGNATURE--------------------------------------------

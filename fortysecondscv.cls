@@ -714,6 +714,10 @@
     \parbox[t]{0.17\textwidth}{\raggedright\strut #1\strut}
     & \parbox[t]{0.81\textwidth}{\strut #2\strut} \\}
 
+\newcommand{\cvitemshortsingle}[1]{%
+    \parbox[t]{0.98\textwidth}{\raggedright #1}
+\\}
+
 % | <date>         <bold-title>  \hfill  <location>  |
 % |                <longer description>              |
 % or, if description is empty:
@@ -738,6 +742,14 @@
         \textbf{#1} \hfill\textbf{#2}
         \par {\textit{#3}} \hfill\textit{#4}
         \par #5 \vspace{\parsep}%
+    }\\
+}
+
+
+\newcommand{\cvitemoneblocksingle}[3]{%
+    \parbox[t]{0.99\textwidth}{%
+        \textbf{#1} \hfill\textit{#2}
+        \par #3 \vspace{\parsep}%
     }\\
 }
 
