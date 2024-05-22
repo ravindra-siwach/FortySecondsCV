@@ -1,5 +1,8 @@
 fonts/*
 tmp/*
+.history/*
+archive/*
+*.tmp
 # *pdf
 *gz
 *aux

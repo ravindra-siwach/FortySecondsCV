@@ -716,7 +716,7 @@
 
 \newcommand{\cvitemshortsingle}[1]{%
     \parbox[t]{0.98\textwidth}{\raggedright #1}
-\\}
+    \\}
 
 % | <date>         <bold-title>  \hfill  <location>  |
 % |                <longer description>              |
@@ -745,6 +745,14 @@
     }\\
 }
 
+\newcommand{\cvitemoneblockdouble}[7]{%
+    \parbox[t]{0.99\textwidth}{%
+        \textbf{#1} \hfill\textbf{#2}\\
+        \textbf{#3} \hfill\textbf{#4}
+        \par {\textit{#5}} \hfill\textit{#6}
+        \par #7 \vspace{\parsep}%
+    }\\
+}
 
 \newcommand{\cvitemoneblocksingle}[3]{%
     \parbox[t]{0.99\textwidth}{%
